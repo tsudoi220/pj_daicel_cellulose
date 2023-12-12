@@ -1,0 +1,160 @@
+@use "~/styles/global/" as *;
+
+.about {
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  @include mq("pc") {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+.about_head {
+  position: relative;
+  z-index: 1;
+}
+
+.about_inner {
+  @include inner-sp;
+  @include mq("pc") {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.about_heading {
+  @include mq("pc") {
+  }
+}
+
+.about_text {
+  @include mq("pc") {
+  }
+  .about_heading + & {
+    margin-top: 40px;
+    @include mq("pc") {
+      margin-top: 98px;
+    }
+  }
+}
+
+.about_box {
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+  background: url('/cellulose/images/bg.png') repeat 0 0;
+  background-size: 400px 400px;
+  @include mq("pc") {
+    margin-top: 29px;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    aspect-ratio: 1440 / 148;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @include mq("pc") {
+      height: 148px;
+    }
+  }
+  &::before {
+    top: -50px;
+    background-image: url('/cellulose/images/about_top_bg.png');
+    @include mq("pc") {
+      top: -148px;
+    }
+  }
+  &::after {
+    bottom: -50px;
+    background-image: url('/cellulose/images/about_bottom_bg.png');
+    @include mq("pc") {
+      bottom: -148px;
+    }
+  }
+}
+
+.about_panels {
+  padding: 56px 0 0;
+  @include mq("pc") {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 83px 0 0;
+  }
+}
+
+.about_panel {
+  @include mq("pc") {
+    height: 480px;
+  }
+  &:nth-child(1) {
+    @include mq("pc") {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  }
+  &:nth-child(2) {
+    @include mq("pc") {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  }
+  &:nth-child(3) {
+    @include mq("pc") {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+  & + & {
+    margin-top: 58px;
+    @include mq("pc") {
+      margin-top: 0;
+    }
+  }
+}
+
+.about_foot {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding-top: 123px;
+  @include mq("pc") {
+    padding-top: 250px;
+  }
+}
+
+.about_pic {
+  position: relative;
+  left: 50%;
+  display: block;
+  width: 480px;
+  transform: translateX(-50%);
+  @include mq("pc") {
+    left: 0;
+    max-width: 800px;
+    width: auto;
+    margin: 0 auto;
+    transform: none;
+  }
+  .about_text + & {
+    margin-top: 72px;
+    @include mq("pc") {
+      margin-top: 120px;
+    }
+  }
+}
+
+.about_zoom-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

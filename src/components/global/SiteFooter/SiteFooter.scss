@@ -1,0 +1,71 @@
+@use "~/styles/global/" as *;
+
+#footer {
+  position: relative;
+}
+
+.sns_label {
+  > img {
+    width: 177px;
+    height: auto;
+  }
+}
+
+.sns_label {
+  > img {
+    min-width: 1px;
+    max-width: 100%;
+    height: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    vertical-align: top;
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+// .footer-pagetop {
+//   @include mq("pc") {
+//     top: initial;
+//     bottom: 380px;
+//   }
+// }
+
+.footer-pagetop {
+  position: relative;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  margin-top: 0;
+}
+
+.footer-pagetop {
+  a {
+    transition-property: background-color;
+  }
+  a._fixed {
+    position: fixed;
+    top: initial;
+    left: initial;
+    bottom: 14px;
+    right: 14px;
+    @include mq("pc") {
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+  a._relative {
+    width: 40px;
+    position: absolute;
+    top: initial;
+    left: initial;
+    bottom: 207px;
+    right: 0px;
+    z-index: 999;
+    @include mq("pc") {
+      width: 69px;
+      bottom: 229px;
+      right: -20px;
+    }
+  }
+}

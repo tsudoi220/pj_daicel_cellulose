@@ -1,0 +1,18 @@
+$breakPointList: 375px, 768px, 1236px;
+$pcMenuBreakPointList: 1160px;
+
+// $img-dir: '/images/';
+// $font-dir: '/cellulose/fonts/';
+
+$sp-content-padding: 35;
+$pc-content-padding: 120;
+$pc-min-content-width: 845;
+$pc-content-width: 1440;
+
+$mq: (
+  'sp-min': 'screen and (max-width: #{nth($breakPointList, 1) - 1})',
+  'sp': 'screen and (max-width: #{nth($breakPointList, 2) - 1})',
+  'pc-min':
+    'print,screen and (min-width: #{nth($breakPointList, 2)}) and (max-width: #{nth($breakPointList, 3)})',
+  'pc': 'print,screen and (min-width: #{nth($breakPointList, 2)})',
+) !default;

@@ -1,0 +1,213 @@
+@use "~/styles/global/" as *;
+
+.picturePanel {
+  position: relative;
+  @include mq("pc") {
+  }
+  &._about01 {
+
+  }
+  &._about02 {
+
+  }
+  &._about03 {
+
+  }
+  &._circulation {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/cellulose/images/picturePanel_circulation_bg_sp.png');
+    border-radius: 8px;
+    @include mq("pc") {
+      background-image: url('/cellulose/images/picturePanel_circulation_bg_pc.png');
+    }
+  }
+}
+
+.picturePanel_label {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  z-index: 1;
+  padding-left: 28px;
+  color: var(--color-green);
+  @include helvetica;
+  font-size: rem(13);
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  @include mq("pc") {
+    left: 24px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 20px;
+    background: url('/cellulose/images/icon_tree.svg') no-repeat 0 0;
+    background-size: contain;
+  }
+}
+
+.picturePanel_body {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  @include mq("pc") {
+    
+  }
+  .picturePanel._about01 &,
+  .picturePanel._about02 &,
+  .picturePanel._about03 & {
+    padding-top: 56px;
+    @include mq("pc") {
+      height: 480px;
+      padding-top: 56px;
+      padding-bottom: 0;
+    }
+  }
+  .picturePanel._about01 & {
+    padding-bottom: 114px;
+  }
+  .picturePanel._about02 & {
+    padding-bottom: 53px;
+  }
+  .picturePanel._about03 & {
+    // height: 560px;
+    overflow: hidden;
+    // height: per(350, 560);
+    @include mq("pc") {
+      // height: auto;
+      // display: flex;
+      // align-items: flex-start;
+      padding-top: 76px;
+      padding-left: 80px;
+    }
+  }
+  .picturePanel._circulation & {
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px;
+    padding-bottom: 87px;
+    background-color: transparent;
+    @include mq("pc") {
+      align-items: center;
+      padding-top: 112px;
+      padding-bottom: 104px;
+    }
+  }
+}
+
+.picturePanel_heading {
+  position: relative;
+  @include noto-serif;
+  font-size: rem(28);
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--color-green);
+  @include mq("pc") {
+    line-height: 2;
+  }
+  .picturePanel._circulation & {
+    display: inline-block;
+    padding-top: 44px;
+    color: var(--color-white);
+    line-height: 1.2;
+    @include mq("pc") {
+      padding-top: 0;
+      padding-left: 41px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 29px;
+      height: 32px;
+      background: url('/cellulose/images/icon_tree_white.svg') no-repeat 0 0;
+      background-size: contain;
+      transform: translateX(-50%);
+      @include mq("pc") {
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+}
+
+.picturePanel_text {
+  position: relative;
+  width: 100%;
+  @include noto-serif;
+  font-size: rem(21);
+  font-weight: 500;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: var(--color-black);
+  text-align: center;
+  z-index: 1;
+  @include mq("pc") {
+    width: auto;
+    text-align: left;
+  }
+}
+
+.picturePanel_pic {
+  display: block;
+  @include mq("pc") {
+    
+  }
+  .picturePanel._about01 & {
+    width: per(310, 350);
+    margin: 48px auto 0;
+    @include mq("pc") {
+      width: auto;
+      max-width: 374px;
+      margin-top: 44px;
+    }
+  }
+  .picturePanel._about02 & {
+    width: per(256, 350);
+    margin: 40px auto 0;
+    @include mq("pc") {
+      width: auto;
+      max-width: 256px;
+      margin-top: 29px;
+    }
+  }
+  .picturePanel._about03 & {
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    width: per(428, 350);
+    margin-top: -67px;
+    margin-bottom: -40px;
+    transform: translateX(-50%);
+    @include mq("pc") {
+      position: absolute;
+      top: -139px;
+      bottom: inherit;
+      left: inherit;
+      right: 0;
+      width: auto;
+      max-width: 758px;
+      margin: 0 auto;
+      transform: none;
+    }
+  }
+  .picturePanel._circulation & {
+    width: per(340, 350);
+    margin: 32px auto 0;
+    @include mq("pc") {
+      width: auto;
+      max-width: 923px;
+      margin: 56px auto 0;
+    }
+  }
+}

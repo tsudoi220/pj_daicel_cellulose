@@ -1,0 +1,210 @@
+@use '~/styles/global/' as *;
+
+.modal {
+  $this: &;
+  // display: none;
+  // visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-size-adjust: 100%;
+  z-index: 1002;
+  // opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  // button
+  &_button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    // width: rem(29);
+    // height: rem(29);
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      //- background-color: var(--color-black);
+      transform-origin: center center;
+    }
+    &::before {
+      transform: rotate(45deg) scale(1.5);
+    }
+    &::after {
+      transform: rotate(-45deg) scale(1.5);
+    }
+    &._close {
+      // top: rem(-60);
+      // @include mq("pc") {
+      //   top: 0;
+      //   right: rem(-82);
+      //   width: rem(38);
+      //   height: rem(38);
+      // }
+    }
+  }
+
+  // modifier: enter
+  &._enter {
+    // transition: opacity 3s, visibility 3s;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  // modifier: enter-to
+  &._enter-to {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // modifier: leave
+  &._leave {
+    // transition: opacity 3s, visibility 3s;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // modifier: leave-to
+  &._leave-to {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  // modifier: closed
+  &._closed {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+// overlay
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#b3b3b3, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal._concept-movie & {
+    background-color: #000;
+  }
+  .modal._pic & {
+    background-color: rgba(#000, 0.5);
+  }
+}
+
+// wrapper
+.modal_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+// scroll
+.modal_scroll {
+  position: relative;
+  z-index: 1;
+  @include mq(pc) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modal_body {
+  position: relative;
+  width: per(368, 390);
+  // width: calc(100% - rem(40));
+  // padding: 0 rem(20);
+  // background-color: var(--color-white);
+  @include mq('pc') {
+    width: auto;
+    // height: calc(90% - rem(32));
+    padding: 0;
+  }
+  .modal._concept-movie & {
+    @include mq('pc') {
+      width: min(100%, 1008px);
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+  }
+}
+
+.modal_content {
+  height: 100%;
+  overflow: scroll;
+  // padding: 0 0 rem(20);
+  .modal._concept-movie & {
+    aspect-ratio: 16 / 9;
+    > iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .modal.__pic & {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+.modal_close-button {
+  position: absolute;
+  top: -43px;
+  right: -10px;
+  @include mq('pc') {
+    top: -12px;
+    right: -48px;
+  }
+}
+
+.modal_pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  @include mq('pc') {
+    width: 900px;
+    height: 600px;
+    padding: 0;
+  }
+  &._about01 {
+    img {
+      width: per(335, 370);
+      @include mq('pc') {
+        width: 100%;
+        max-width: 670px;
+      }
+    }
+  }
+  &._circulation {
+    background-color: #84C8C6;
+    img {
+      width: per(340, 370);
+      @include mq('pc') {
+        width: 100%;
+        max-width: 670px;
+      }
+    }
+  }
+}

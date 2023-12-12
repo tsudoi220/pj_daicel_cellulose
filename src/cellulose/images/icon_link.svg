@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="btn" transform="translate(-547.5 -271.5)">
+    <path id="bg" d="M24,12A12,12,0,1,1,12,0,12,12,0,0,1,24,12" transform="translate(548 272)" fill="none" stroke="#0d7775" stroke-width="1" fill-rule="evenodd"/>
+    <path id="bg_hover" d="M12,6A6,6,0,1,1,6,0a6,6,0,0,1,6,6" transform="translate(552.5 278.5)" fill="#0d7775" fill-rule="evenodd" opacity="0.004"/>
+    <path id="arw" d="M560,277.273l4,4-4,4" transform="translate(-2 3)" fill="none" stroke="#0d7775" stroke-width="1"/>
+  </g>
+</svg>

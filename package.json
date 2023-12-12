@@ -1,0 +1,114 @@
+{
+  "name": "pj-daicel-cellulose",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "astro": "^2.0.2",
+    "gsap": "^3.11.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "swiper": "^9.3.2",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development astro dev",
+    "start": "astro dev",
+    "build:astro": "cross-env NODE_ENV=production astro build",
+    "build-stg": "cross-env NODE_ENV=staging astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 8888",
+    "build-storybook": "build-storybook",
+    "init-msw": "msw init public/",
+    "serve": "npm-run-all -p dev storybook",
+    "format:html": "prettier --write 'htdocs/**/*.html'",
+    "clean": "rimraf ./htdocs/nanodiamond/js/client.js ./htdocs/chunks",
+    "build": "npm-run-all -s build:astro format:html clean",
+    "lint": "eslint ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@astrojs/react": "^2.0.1",
+    "@storybook/addon-actions": "^6.5.7",
+    "@storybook/addon-docs": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.7",
+    "@storybook/addon-interactions": "^6.5.7",
+    "@storybook/addon-links": "^6.5.7",
+    "@storybook/addon-viewport": "^7.6.4",
+    "@storybook/builder-webpack5": "^6.5.7",
+    "@storybook/jest": "^0.0.10",
+    "@storybook/manager-webpack5": "^6.5.7",
+    "@storybook/node-logger": "^6.5.7",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.5.7",
+    "@storybook/testing-library": "^0.0.11",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/parser": "^5.50.0",
+    "@whitespace/storybook-addon-html": "^5.1.1",
+    "astro-compress": "^1.1.35",
+    "autoprefixer": "^10.4.13",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "cross-env": "^7.0.3",
+    "css-declaration-sorter": "^6.3.1",
+    "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "glob": "^9.3.0",
+    "htmlhint": "^1.1.4",
+    "msw": "^0.42.0",
+    "msw-storybook-addon": "^1.6.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-sort-media-queries": "^4.3.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-astro": "^0.8.0",
+    "prop-types": "^15.8.1",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "storybook-addon-turbo-build": "^2.0.1",
+    "style-loader": "^3.3.1",
+    "ts-node": "^10.9.1"
+  }
+}

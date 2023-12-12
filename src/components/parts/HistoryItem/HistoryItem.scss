@@ -1,0 +1,75 @@
+@use "~/styles/global/" as *;
+
+.historyItem {
+  position: relative;
+  @include mq("pc") {
+  }
+}
+
+.historyItem_year {
+  @include noto-serif;
+  font-weight: 500;
+  @include mq("pc") {
+  }
+}
+
+.historyItem_year-value {
+  font-size: rem(64);
+  line-height: 1.13;
+  letter-spacing: -0.04em;
+  color: var(--color-green);
+  @include mq("pc") {
+  }
+}
+
+.historyItem_year-unit {
+  display: inline-block;
+  font-size: rem(24);
+  line-height: 3.75;
+  letter-spacing: normal;
+  color: var(--color-black);
+  @include mq("pc") {
+  }
+  .historyItem_year-value + & {
+    margin-left: 4px;
+  }
+}
+
+.historyItem_pic {
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+  @include mq("pc") {
+  }
+}
+
+.historyItem_heading {
+  @include noto-sans;
+  font-size: rem(19);
+  font-weight: bold;
+  line-height: 1.74;
+  letter-spacing: 0.08em;
+  color: var(--color-black);
+  @include mq("pc") {
+  }
+  .historyItem_pic + & {
+    margin-top: 32px;
+  }
+}
+
+.historyItem_text {
+  @include noto-sans;
+  font-size: rem(17);
+  font-weight: normal;
+  line-height: 1.94;
+  letter-spacing: normal;
+  color: var(--color-black);
+  @include mq("pc") {
+  }
+  .historyItem_heading + & {
+    margin-top: 16px;
+  }
+  .historyItem_pic + & {
+    margin-top: 32px;
+  }
+}

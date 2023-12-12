@@ -1,0 +1,42 @@
+{
+  "name": "astro-relative-links",
+  "type": "module",
+  "version": "0.2.6",
+  "description": "Build Astro with relative links.",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Kite",
+  "license": "MIT",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixkaito/astro-relative-links.git"
+  },
+  "keywords": [
+    "astro",
+    "withastro",
+    "astro-component",
+    "astro-integration",
+    "renderer",
+    "relative-link"
+  ],
+  "bugs": {
+    "url": "https://github.com/ixkaito/astro-relative-links/issues"
+  },
+  "homepage": "https://github.com/ixkaito/astro-relative-links#readme",
+  "dependencies": {
+    "astro": "^2.0.18",
+    "glob": "^9.2.1"
+  },
+  "devDependencies": {
+    "@types/html-escaper": "^3.0.0",
+    "@types/node": "^18.14.6",
+    "typescript": "^4.9.5"
+  }
+}

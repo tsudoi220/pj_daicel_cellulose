@@ -1,0 +1,37 @@
+---
+import SiteHead from "./Head.astro";
+import { metaData } from '~/constants/metaData'
+import { Head } from '~/components/global/Head'
+import { SiteHeader } from '~/components/global/SiteHeader/'
+import { SiteFooter } from '~/components/global/SiteFooter/'
+import { PageTopLink } from "~/components/parts/PageTopLink";
+const { id } = Astro.props
+import '~/styles/foundation/index.scss'
+import '~/styles/layout/index.scss'
+//- import "~/styles/components/index.scss";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    {/*-- <SiteHead is:raw></SiteHead> --*/}
+    <Head id={id} />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQSD454" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <SiteHeader />
+    <slot />
+    <div class="footer-container" data-footer-container>
+      <PageTopLink classNames="footer_pageTopLink" />
+      <SiteFooter />
+    </div>
+    {/*-- <div class="m-menu-overlay" data-menu-overlay aria-hidden="true"></div> --*/}
+    <script src="/js/common.js" is:inline></script>
+    <script src="/js/modules.js" is:inline></script>
+    <script src="/js/lib/jquery.js" is:inline></script>
+    <script src="/js/custom/common_add.js" is:inline></script>
+    <script src="/src/ts/cellulose/app.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+@use "~/styles/global/" as *;
+
+.featuresList {
+  position: relative;
+  @include mq("pc") {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 80px;
+  }
+}
+
+.featuresList_item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 40px 0;
+  border-bottom: 1px solid #9fc7a1;
+  @include mq("pc") {
+    width: calc(33.334% - 80px);
+    padding: 24px 0;
+  }
+  &::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-image: linear-gradient(140deg, #33b2b0 6%, #0e78b1 99%);
+    border-radius: 50%;
+    @include mq("pc") {
+
+    }
+  }
+}
+
+.featuresList_label {
+  position: relative;
+  padding-left: 16px;
+  color: var(--color-black);
+  font-size: rem(21);
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
+  text-align: left;
+  @include mq("pc") {
+    flex: 1;
+  }
+  sub {
+    bottom: 0;
+  }
+  > span {
+    display: block;
+    font-size: rem(15);
+    @include mq("pc") {
+      
+    }
+  }
+}

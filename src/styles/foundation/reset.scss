@@ -1,0 +1,161 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+li {
+  list-style: none;
+  list-style-type: none;
+}
+caption,
+th {
+  font-weight: normal;
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+area {
+  border: none;
+  outline: none;
+}
+abbr,
+acronym {
+  border: 0;
+}
+* {
+  box-sizing: border-box;
+}
+input,
+select,
+textarea {
+  appearance: none;
+  border: 0;
+  outline: none;
+}
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+input[type='submit'],
+input[type='button'] {
+  cursor: pointer;
+}
+input,
+textarea {
+  appearance: none;
+}
+a {
+  outline: none;
+}
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}

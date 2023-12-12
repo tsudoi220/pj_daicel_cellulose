@@ -1,0 +1,78 @@
+@use "~/styles/global/" as *;
+
+.moreLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  @include mq("pc") {
+  }
+}
+
+.moreLink_label {
+  @include noto-sans;
+  font-size: rem(17);
+  font-weight: bold;
+  line-height: 1.94;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--color-green);
+  @include mq("pc") {
+  }
+}
+
+.moreLink_icon {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-green);
+  border-radius: 50%;
+  @include mq("pc") {
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+  }
+  &::before {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-green);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+    @include mq("pc") {
+    }
+  }
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 1px);
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid var(--color-green);
+    border-right: 2px solid var(--color-green);
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 1;
+  }
+  @include hover {
+    &::before {
+      transition: transform var(--transition-duration-early) var(--transition-timing-function);
+    }
+    &::after {
+      transition: border-color var(--transition-duration-early) var(--transition-timing-function);
+    }
+  }
+  .moreLink:hover & {
+    &::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    &::after {
+      border-color: var(--color-white);
+    }
+  }
+}

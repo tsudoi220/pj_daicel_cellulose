@@ -1,0 +1,29 @@
+@use "~/styles/global/" as *;
+
+.closeButton {
+  position: relative;
+  display: inline-block;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 8px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-white);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  &:focus {
+    outline: none;
+  }
+}

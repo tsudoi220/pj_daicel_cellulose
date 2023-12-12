@@ -1,0 +1,22 @@
+---
+const { id } = Astro.props
+import Layout from '~/layouts/Layout.astro'
+// import { metaData } from '~/constants/metaData'
+import { Movie } from "~/components/modules/Movie";
+import { Menu } from "~/components/parts/Menu";
+import { Message } from "~/components/modules/Message";
+import { History } from "~/components/modules/History";
+import { Concept } from "~/components/modules/Concept";
+import { LearnMore } from "~/components/modules/LearnMore";
+---
+
+<Layout id="products">
+  <main class="main _products">
+    <Movie classNames="main_movie" />
+    <Menu classNames="main_menu" isHome={true} />
+    <Message classNames="main_message" />
+    <History />
+    <Concept />
+    <LearnMore type="home" />
+  </main>
+</Layout>

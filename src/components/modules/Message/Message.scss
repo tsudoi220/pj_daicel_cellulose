@@ -1,0 +1,75 @@
+@use "~/styles/global/" as *;
+
+.message {
+  position: relative;
+  @include mq("pc") {
+  }
+}
+
+.message_inner {
+  position: relative;
+  max-width: 375px;
+  margin: 0 auto;
+  @include mq("pc") {
+    max-width: $pc-content-width + px;
+  }
+}
+
+.message_heading {
+  @include mq("pc") {
+  }
+}
+
+.message_body {
+  @include mq("pc") {
+  }
+  .message_heading + & {
+    padding-top: 88px;
+    @include mq("pc") {
+      padding-top: 135px;
+    }
+  }
+}
+
+.message_pic {
+  position: absolute;
+  display: block;
+  &._pic0 {
+    top: -189px;
+    left: 222px;
+    width: 224px;
+    height: 224px;
+    @include mq("pc") {
+      top: -20px;
+      left: 1080px;
+      width: 480px;
+      height: 480px;
+    }
+  }
+  &._pic1 {
+    top: 323px;
+    left: -36px;
+    width: 136px;
+    height: 136px;
+    @include mq("pc") {
+      top: 401px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+    }
+  }
+  &._pic2 {
+    left: 50%;
+    bottom: -552px;
+    width: 480px;
+    height: 480px;
+    transform: translateX(-50%);
+    @include mq("pc") {
+      bottom: -250px;
+      left: 1000px;
+      width: 640px;
+      height: 640px;
+      transform: none;
+    }
+  }
+}

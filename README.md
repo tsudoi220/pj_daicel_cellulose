@@ -1,2 +1,2 @@
-# pj_daicel_cellulose
-【aru】pj_daicel_cellulose
+# pj_daicel_nano
+【aru】pj_daicel_nano

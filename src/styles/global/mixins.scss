@@ -1,0 +1,91 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+@mixin mq($value) {
+  @media #{map-get($mq, $value)} {
+    @content;
+  }
+}
+
+@mixin hover() {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+
+@mixin helvetica {
+  font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+}
+
+@mixin noto-sans {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@mixin noto-serif {
+  font-family: 'Noto Serif JP', serif;
+}
+
+@mixin yu-gothic {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin catamaran {
+  font-family: 'Catamaran', sans-serif;
+}
+
+@mixin inner-sp {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@mixin inner {
+  padding-right: per($sp-content-padding, 375);
+  padding-left: per($sp-content-padding, 375);
+  @include mq('pc') {
+    width: min(100%, unquote($pc-min-content-width + $pc-content-padding + $pc-content-padding + 'px'));
+    margin: 0 auto;
+    padding-right: min(per($pc-content-padding, $pc-min-content-width + $pc-content-padding + $pc-content-padding), unquote($pc-content-padding + 'px'));
+    padding-left: min(per($pc-content-padding, $pc-min-content-width + $pc-content-padding + $pc-content-padding), unquote($pc-content-padding + 'px'));
+  }
+}
+
+@mixin slideIn {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  &._animation {
+    animation-name: slideIn;
+  }
+}
+
+@mixin imgSlideIn {
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  &._animation {
+    animation-name: imgSlideIn;
+  }
+}
+
+@keyframes imgSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

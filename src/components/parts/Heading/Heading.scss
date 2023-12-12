@@ -1,0 +1,85 @@
+@use "~/styles/global/" as *;
+
+.heading {
+  @include mq("pc") {
+  }
+  picture {
+    display: block;
+  }
+  &._message {
+    max-width: 314px;
+    margin: 0 auto;
+    @include mq("pc") {
+      width: 694px;
+      height: 228px;
+      max-width: 100%;
+      img {
+        width: 694px;
+        height: 228px;
+      }
+    }
+  }
+  &._about {
+    max-width: 396px;
+    margin: 0 auto;
+    @include mq("pc") {
+      width: 584px;
+      height: 136px;
+      max-width: 100%;
+      img {
+        width: 584px;
+        height: 136px;
+      }
+    }
+  }
+  &._features {
+    @include noto-serif;
+    font-size: rem(48);
+    font-weight: 500;
+    line-height: 0.83;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: var(--color-green);
+    @include mq("pc") {
+    }
+  }
+  &._learnMore {
+    max-width: 280px;
+    margin: 0 auto;
+    @include mq("pc") {
+      width: 584px;
+      max-width: 100%;
+      height: 32px;
+      img {
+        width: 584px;
+        height: 32px;
+      }
+    }
+  }
+  &._history {
+    // max-width: 280px;
+    margin: 0 auto;
+    @include mq("pc") {
+      width: 758px;
+      max-width: 100%;
+      height: 226px;
+      img {
+        width: 758px;
+        height: 226px;
+      }
+    }
+  }
+  &._concept {
+        // max-width: 280px;
+        margin: 0 auto;
+        @include mq("pc") {
+          width: 778px;
+          max-width: 100%;
+          height: 226px;
+          img {
+            width: 778px;
+            height: 226px;
+          }
+        }
+  }
+}

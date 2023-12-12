@@ -1,0 +1,62 @@
+@use "~/styles/global/" as *;
+
+.history {
+  position: relative;
+  background: url('/cellulose/images/bg.png') repeat 0 0;
+  background-size: 400px 400px;
+  @include mq("pc") {
+    padding-top: 135px;
+    padding-bottom: 108px;
+  }
+}
+
+.history_inner {
+  @include mq("pc") {
+    width: min(100%, 1168px);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+.history_heading {
+  @include mq("pc") {
+  }
+}
+
+.history_text {
+  @include mq("pc") {
+  }
+  .history_heading + & {
+    @include mq("pc") {
+      margin-top: 80px;
+    }
+  }
+}
+
+.history_items {
+  @include mq("pc") {
+  }
+  .history_text + & {
+    @include mq("pc") {
+      margin-top: 55px;
+    }
+  }
+}
+
+.history_items-group {
+  @include mq("pc") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 80px;
+    padding-top: 23px;
+    padding-bottom: 46px;
+  }
+  & + & {
+    border-top: 1px solid #9fc7a1;
+  }
+}
+
+.history_item {
+  @include mq("pc") {
+  }
+}

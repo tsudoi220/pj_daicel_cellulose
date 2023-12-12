@@ -1,0 +1,78 @@
+@use "~/styles/global/" as *;
+
+.concept {
+  position: relative;
+  @include mq("pc") {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+.concept_inner {
+  @include mq("pc") {
+    width: min(100%, 1168px);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+.concept_heading {
+  @include mq("pc") {
+  }
+  &._sub {
+    @include noto-serif;
+    font-size: rem(32);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--color-green);
+    @include mq("pc") {
+      width: 343px;
+    }
+  }
+}
+
+.concept_pic {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  @include mq("pc") {
+  }
+  .concept_heading + & {
+    @include mq("pc") {
+      margin-top: 88px;
+    }
+  }
+}
+
+.concept_contents {
+  @include mq("pc") {
+    display: flex;
+    padding-top: 80px;
+  }
+}
+
+.concept_body {
+  @include mq("pc") {
+    flex: 1;
+    padding-left: 55px;
+    padding-bottom: 38px;
+    border-left: 2px solid #f5f5f5;
+  }
+}
+
+.concept_text {
+  @include mq("pc") {
+  }
+}
+
+.concept_link {
+  @include mq("pc") {
+  }
+  .concept_text + & {
+    @include mq("pc") {
+      margin-top: 45px;
+    }
+  }
+}

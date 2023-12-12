@@ -1,0 +1,47 @@
+---
+const { id } = Astro.props
+import Layout from '~/layouts/Layout.astro'
+// import { metaData } from '~/constants/metaData'
+import { Movie } from "~/components/modules/Movie";
+import { Menu } from "~/components/parts/Menu";
+import { Message } from "~/components/modules/Message";
+import { PicturePanel } from "~/components/parts/PicturePanel";
+import { ZoomButton } from "~/components/parts/ZoomButton";
+import { About } from "~/components/modules/About";
+import { LearnMore } from "~/components/modules/LearnMore";
+import { Modal } from '~/components/modules/Modal/'
+---
+
+<Layout id="home">
+  <main class="main _home">
+    <Movie classNames="main_movie" />
+    <Menu classNames="main_menu" isHome={true} data-menu />
+    <Message classNames="main_message" />
+    <PicturePanel classNames="main_circulation _circulation">
+      <div class="picturePanel_body">
+        <h3 class="picturePanel_heading">サステナブル素材<br class="_sp" />セルロースの循環</h3>
+        <picture class="picturePanel_pic">
+          <img src="/cellulose/images/picture_panel_pic3.png" alt="" />
+        </picture>
+      </div>
+      <div class="_sp">
+        <ZoomButton classNames="about_zoom-button" data-modal-button="open" aria-controls="modal-circulation" aria-expanded="false" />
+      </div>
+    </PicturePanel>
+    <About />
+    <LearnMore type="home" />
+  </main>
+  <Modal modalID="modal-concept-movie" classNames="_concept-movie">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Mc5M6FgMFPw?si=CxnzI4bW4yYLUV65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </Modal>
+  <Modal modalID="modal-circulation" classNames="_pic">
+    <picture class="modal_pic _circulation">
+      <img src="/cellulose/images/picture_panel_pic3.png" alt="" />
+    </picture>
+  </Modal>
+  <Modal modalID="modal-about-01" classNames="_pic">
+    <picture class="modal_pic _about01">
+      <img src="/cellulose/images/picture_panel_pic0.png" alt="" />
+    </picture>
+  </Modal>
+</Layout>

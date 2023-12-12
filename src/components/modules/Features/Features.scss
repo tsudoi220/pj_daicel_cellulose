@@ -1,0 +1,43 @@
+@use "~/styles/global/" as *;
+
+.features {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  @include mq("pc") {
+    padding-top: 160px;
+    padding-bottom: 0;
+  }
+}
+
+.features_head {
+  @include mq("pc") {
+  }
+}
+
+.features_heading {
+  @include mq("pc") {
+  }
+}
+
+.features_text {
+  @include mq("pc") {
+  }
+  .features_heading + & {
+    margin-top: 24px;
+    @include mq("pc") {
+      margin-top: 48px;
+    }
+  }
+}
+
+.features_list {
+  @include mq("pc") {
+  }
+  .features_head + & {
+    margin-top: 24px;
+    @include mq("pc") {
+      margin-top: 80px;
+    }
+  }
+}

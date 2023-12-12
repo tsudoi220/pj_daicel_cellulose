@@ -1,0 +1,44 @@
+@use "~/styles/global/" as *;
+
+.text {
+  display: block;
+  color: var(--color-black);
+  @include noto-sans;
+  font-size: rem(17);
+  font-weight: 500;
+  line-height: 1.94;
+  letter-spacing: 0.08em;
+  @include mq("pc") {
+    
+  }
+  &._normal {
+    font-weight: normal;
+  }
+  &._center {
+    text-align: center;
+  }
+  &._wide {
+    line-height: 2.26;
+    @include mq("pc") {
+      line-height: 3.05;
+    }
+  }
+  &._large {
+    font-size: rem(19);
+    @include mq("pc") {
+      font-size: rem(21);
+    }
+  }
+  & + & {
+    margin-top: 42px;
+    @include mq("pc") {
+      margin-top: 64px;
+    }
+  }
+  &._narrow + &._narrow {
+    margin-top: 12px;
+    @include mq("pc") {
+      margin-top: 34px;
+    }
+  }
+}

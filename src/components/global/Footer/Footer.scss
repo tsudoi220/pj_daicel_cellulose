@@ -1,0 +1,40 @@
+@use "~/styles/global/" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  @include mq("pc") {
+    padding-bottom: 90px;
+  }
+}
+
+.footer_pageTopLink {
+  @include mq("pc") {
+  }
+}
+
+.footer_logo {
+  display: block;
+  width: 110px;
+  margin-top: 95px;
+  @include mq("pc") {
+  }
+}
+
+.footer_copyright {
+  > small {
+    color: var(--color-gray-900);
+    font-weight: 400;
+    font-size: rem(11);
+    letter-spacing: 0.1em;
+    @include catamaran;
+  }
+  .footer_logo + & {
+    margin-top: 18px;
+    @include mq("pc") {
+      margin-top: 15px;
+    }
+  }
+}

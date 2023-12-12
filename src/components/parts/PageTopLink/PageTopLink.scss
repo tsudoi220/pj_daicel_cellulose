@@ -1,0 +1,77 @@
+@use "~/styles/global/" as *;
+
+.pageTopLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid var(--color-green);
+  background-color: var(--color-green);
+  min-height: 64px;
+  @include mq("pc") {
+  }
+  @include hover {
+    &::before {
+      transition: transform var(--transition-duration-early) var(--transition-timing-function);
+    }
+    &:hover {
+      &::before {
+        transform: scaleY(1);
+      }
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.pageTopLink_label {
+  position: relative;
+  color: var(--color-white);
+  @include helvetica;
+  font-weight: 600;
+  font-size: rem(13);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  z-index: 2;
+  @include mq("pc") {
+
+  }
+  @include hover {
+    transition: color var(--transition-duration-early) var(--transition-timing-function);
+    .pageTopLink:hover & {
+      color: var(--color-green);
+    }
+  }
+}
+
+.pageTopLink_label-icon {
+  position: absolute;
+  top: 4px;
+  right: -20px;
+  width: 10px;
+  height: 6px;
+  @include mq("pc") {
+
+  }
+  @include hover {
+    path {
+      transition: stroke var(--transition-duration-early) var(--transition-timing-function);
+    }
+    .pageTopLink:hover & {
+      path {
+        stroke: var(--color-green);
+      }
+    }
+  }
+}

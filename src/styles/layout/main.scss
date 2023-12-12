@@ -1,0 +1,41 @@
+@use '~/styles/global/' as *;
+
+.main {
+  position: relative;
+  @include noto-sans;
+  @include mq('pc') {
+  }
+}
+
+.main_menu {
+  min-height: 54px;
+  @include mq('pc') {
+    // display: flex;
+    // justify-content: center;
+    min-height: 64px;
+  }
+}
+
+.main_message {
+  overflow: hidden;
+  padding-bottom: 552px;
+  @include mq('pc') {
+    padding-bottom: 240px;
+  }
+  .main_menu + & {
+    padding-top: 224px;
+    @include mq('pc') {
+      padding-top: 200px;
+    }
+  }
+}
+
+.main_circulation {
+  position: relative;
+  width: per(350, 390);
+  margin: 160px auto 0;
+  @include mq('pc') {
+    max-width: 1360px;
+    margin: -17px auto 0;
+  }
+}

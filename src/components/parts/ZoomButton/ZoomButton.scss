@@ -1,0 +1,98 @@
+@use "~/styles/global/" as *;
+
+.zoomButton {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+  border-radius: 0 0 8px 0;
+  @include mq("pc") {
+  }
+  &:focus {
+    outline: none;
+  }
+  &::before,
+  &::after {
+    content: '';
+  }
+  &::before {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 120px 120px;
+    border-color: transparent transparent var(--color-green) transparent;
+    z-index: 0;
+  }
+  &::after {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: block;
+    width: 96px;
+    height: 96px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    z-index: 1;
+    transform: scale(0.2);
+    transform-origin: center;
+    opacity: 0;
+  }
+  @include hover {
+    &::after {
+      transition: opacity var(--transition-duration-early) var(--transition-timing-function), transform var(--transition-duration) var(--transition-timing-function);
+    }
+    &:hover {
+      &::after {
+        transform: scale(2);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.zoomButton_border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 1px 1px var(--color-green);
+  z-index: 3;
+  border-radius: 0 0 8px 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 24.5px);
+    left: calc(50% - 24.5px);
+    display: block;
+    width: 140%;
+    height: 140%;
+    border: 1px solid var(--color-green);
+    z-index: 3;
+    transform: rotate(45deg);
+  }
+}
+
+.zoomButton_icon {
+  position: absolute;
+  bottom: 19px;
+  right: 26px;
+  display: inline-block;
+  width: 22px;
+  height: 38px;
+  z-index: 2;
+  @include hover {
+    path {
+      transition: fill var(--transition-duration-early) var(--transition-timing-function);
+    }
+    .zoomButton:hover & {
+      path {
+        fill: var(--color-green);
+      }
+    }
+  }
+}
