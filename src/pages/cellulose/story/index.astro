@@ -1,0 +1,22 @@
+---
+const { id } = Astro.props
+import Layout from '~/layouts/Layout.astro'
+import { StoryHead } from "~/components/modules/StoryHead";
+import { Menu } from "~/components/parts/Menu";
+import { History } from "~/components/modules/History";
+import { ValueChain } from "~/components/modules/ValueChain";
+import { LearnMoreDataList } from '~/constants/LearnMoreDataList'
+import { LearnMore } from "~/components/modules/LearnMore";
+---
+
+<Layout id="story">
+  <main class="main _story">
+    <Menu classNames="main_menu _page" isStory={true} data-menu="fixed" />
+    <section>
+      <StoryHead />
+      <History />
+      <ValueChain />
+    </section>
+    <LearnMore type="story" data={LearnMoreDataList} />
+  </main>
+</Layout>

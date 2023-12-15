@@ -13,9 +13,10 @@ const Message = ({
     <section className={"message" + (classNames ? ` ${classNames}` : "")} >
       <div className="message_inner">
         <Heading as="h2" classNames="message_heading _message" data-scroll-animation>
-          <picture>
-            <source srcSet="/cellulose/images/heading_message_sp.png" media="(max-width: 767px)" />
-            <img src="/cellulose/images/heading_message_pc.png" alt="世界を変えろ。木ならできる ダイセルのセルロース" />
+          <span className="heading_sub"><span className="heading_sub-label">Message</span></span>
+          <picture className="heading_pic">
+            <source srcSet="/cellulose/images/heading_message_sp.svg" media="(max-width: 767px)" />
+            <img src="/cellulose/images/heading_message_pc.svg" alt="世界を変えろ。木ならできる ダイセルのセルロース" />
           </picture>
         </Heading>
         <div className="message_body">

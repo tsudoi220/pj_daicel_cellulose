@@ -1,0 +1,65 @@
+@use "~/styles/global/" as *;
+
+.valueChain {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @include mq("pc") {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+.valueChain_inner {
+  @include inner-sp;
+  @include mq("pc") {
+    @include inner-pc(1168);
+    margin: 0 auto;
+  }
+}
+
+.valueChain_heading {
+  @include mq("pc") {
+  }
+}
+
+.valueChain_text {
+  @include mq("pc") {
+  }
+  .valueChain_heading + & {
+    margin-top: 56px;
+    @include mq("pc") {
+      margin-top: 96px;
+    }
+  }
+}
+
+.valueChain_sec {
+  .valueChain_text + & {
+    padding-top: 120px;
+    @include mq("pc") {
+      padding-top: 160px;
+    }
+  }
+}
+
+.valueChain_movie {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  line-height: 1;
+  @include mq("pc") {
+
+  }
+  > iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  .valueChain_heading + & {
+    margin-top: 48px;
+    @include mq("pc") {
+      margin-top: 56px;
+    }
+  }
+}

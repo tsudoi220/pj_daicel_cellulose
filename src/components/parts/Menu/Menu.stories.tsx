@@ -16,6 +16,6 @@ const TemplateBasic: ComponentStory<typeof Menu> = (args) => (
 export const Basic = TemplateBasic.bind({});
 Basic.args = {
   isHome: true,
-  isAbout: false,
+  isStory: false,
   isProducts: false,
 };

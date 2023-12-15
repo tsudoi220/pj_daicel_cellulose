@@ -23,6 +23,11 @@
       line-height: 3.05;
     }
   }
+  &._wide-s {
+    @include mq("pc") {
+      line-height: 2.29;
+    }
+  }
   &._large {
     font-size: rem(19);
     @include mq("pc") {

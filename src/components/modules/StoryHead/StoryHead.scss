@@ -1,0 +1,34 @@
+@use "~/styles/global/" as *;
+
+.storyHead {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @include mq("pc") {
+    padding-top: 194px;
+    padding-bottom: 160px;
+  }
+}
+
+.storyHead_inner {
+  @include inner-sp();
+  @include mq("pc") {
+    @include inner-pc(1168);
+    margin: 0 auto;
+  }
+}
+
+.storyHead_heading {
+  @include mq("pc") {
+
+  }
+}
+
+.storyHead_text {
+  .storyHead_heading + & {
+    margin-top: 80px;
+    @include mq("pc") {
+      margin-top: 144px;
+    }
+  }
+}

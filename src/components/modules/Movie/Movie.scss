@@ -57,10 +57,9 @@
   @include mq("pc") {
     display: block;
     top: 29.1%;
-    width: min(100%, 1168px);
+    @include inner-pc(1168);
     height: auto;
     margin: 0 auto;
-    padding: 0 24px;
   }
 }
 

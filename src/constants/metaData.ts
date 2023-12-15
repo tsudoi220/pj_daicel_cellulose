@@ -1,4 +1,4 @@
-export type PAGE_TYPE = 'home' | 'about' | 'products'
+export type PAGE_TYPE = 'home' | 'story' | 'products'
 
 type pageDataType = {
   id: string
@@ -56,8 +56,8 @@ export const metaData: metaDataType = {
     },
     {
       id: 'home',
-      title: 'ダイセルのセルロース | 株式会社ダイセル',
-      description: 'ダイセルのセルロース',
+      title: 'ダイセルのセルロース｜株式会社ダイセル',
+      description: 'ダイセルが100年かけて磨き上げてきた、栽培できる素材セルロースをご紹介します。',
       keywords: '',
       path: '/cellulose/',
       noindex: false,
@@ -65,21 +65,21 @@ export const metaData: metaDataType = {
       status: '作業中',
     },
     {
-      id: 'about',
-      title: 'セルロースとは | 株式会社ダイセル',
-      description: 'セルロースとは',
+      id: 'products',
+      title: 'ダイセルのセルロース製品｜株式会社ダイセル',
+      description: 'ダイセルのセルロースは、多様な目的に合わせ緻密に特性をデザインすることで様々な製品に採用され社会に役立っています。',
       keywords: '',
-      path: '/cellulose/about/',
+      path: '/cellulose/products/',
       noindex: false,
       shareType: 'default',
       status: '作業中',
     },
     {
-      id: 'products',
-      title: 'ダイセルのセルロース製品一覧 | 株式会社ダイセル',
-      description: 'ダイセルのセルロース製品一覧',
+      id: 'story',
+      title: 'ダイセルのセルロースの歴史と未来｜株式会社ダイセル',
+      description: 'ダイセルは創業より100 年以上に渡り、セルロースの研究・開発を進め、新しい価値を生み出し続け、世の中に提供しています。',
       keywords: '',
-      path: '/cellulose/products/',
+      path: '/cellulose/story/',
       noindex: false,
       shareType: 'default',
       status: '作業中',
@@ -89,4 +89,12 @@ export const metaData: metaDataType = {
     daicel: 'https://www.daicel.com/',
     inquiry: 'https://www.daicel.com/inquiry/input?inquiry_type=14'
   }
+}
+
+export const getPageData = (id: string): pageDataType => {
+  const pageData = metaData.pages.find((page) => page.id === id);
+  if (!pageData) {
+    throw new Error("ページデータが見つかりません");
+  }
+  return pageData;
 }

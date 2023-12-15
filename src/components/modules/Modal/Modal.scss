@@ -143,9 +143,7 @@
   }
   .modal._concept-movie & {
     @include mq('pc') {
-      width: min(100%, 1008px);
-      padding-right: 24px;
-      padding-left: 24px;
+      @include inner-pc(1008)
     }
   }
 }

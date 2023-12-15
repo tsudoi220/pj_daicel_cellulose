@@ -17,10 +17,8 @@ const About = ({
       <div className="about_head">
         <div className="about_inner">
           <Heading as="h2" classNames="about_heading _about" data-scroll-animation>
-            <picture>
-              <source srcSet="/cellulose/images/heading_about_sp.png" media="(max-width: 767px)" />
-              <img src="/cellulose/images/heading_about_pc.png" alt="「セルロース」とは" />
-            </picture>
+            <span className="heading_sub"><span className="heading_sub-label">About Cellulose</span></span>
+            <span className="heading_label"><span className="heading_label-narrow">「セルロース」</span>とは</span>
           </Heading>
           <Text classNames="about_text" data-scroll-animation>セルロースとは、木材などの植物の主成分であり、地球上で最も多く存在する化合物の一つです。自然由来の成分であるため、森林栽培などを通じて人が容易に入手できる素材であり、その柔軟な特性から工業用品から生活用品、また食品まで幅広い用途があります。遥か昔から私たちの身近に存在している素材であり、資源として持続可能な特性からも近年、改めて重要視されています。</Text>
         </div>

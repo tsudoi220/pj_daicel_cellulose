@@ -1,0 +1,33 @@
+@use "~/styles/global/" as *;
+
+.productsHead {
+  position: relative;
+  @include mq("pc") {
+    padding-top: 194px;
+  }
+}
+
+.productsHead_inner {
+  @include mq("pc") {
+    @include inner-pc(1408);
+    margin: 0 auto;
+  }
+}
+
+.productsHead_heading {
+
+}
+
+.productsHead_pic {
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+  @include mq("pc") {
+
+  }
+  .productsHead_heading + & {
+    @include mq("pc") {
+      margin-top: 160px;
+    }
+  }
+}

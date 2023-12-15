@@ -1,16 +1,17 @@
 import React from "react";
 import type { ComponentProp } from "~/components/@types/Component";
+import { getPageData } from '~/constants/metaData'
 import "./Menu.scss";
 
 type MenuProps = {
   isHome?: boolean;
-  isAbout?: boolean;
+  isStory?: boolean;
   isProducts?: boolean;
 } & ComponentProp;
 
 const Menu = ({
   isHome = false,
-  isAbout = false,
+  isStory = false,
   isProducts = false,
   classNames,
   ...delegated
@@ -26,19 +27,19 @@ const Menu = ({
         <div className="menu_content" id="menu-content" aria-hidden="true">
           <ul className="menu_list">
             <li className="menu_item">
-              <a href="#" className={"menu_link" + (isHome ? ` _active` : "")}>
+              <a href={getPageData('home').path} className={"menu_link" + (isHome ? ` _active` : "")}>
                 <span className="menu_arrow"></span>
                 <span className="menu_label">ダイセルのセルロース</span>
               </a>
             </li>
             <li className="menu_item">
-              <a href="#" className={"menu_link" + (isAbout ? ` _active` : "")}>
+              <a href={getPageData('products').path} className={"menu_link" + (isProducts ? ` _active` : "")}>
                 <span className="menu_arrow"></span>
                 <span className="menu_label"><span className="menu_label-s">ダイセルのセルロース</span>製品</span>
               </a>
             </li>
             <li className="menu_item">
-              <a href="#" className={"menu_link" + (isProducts ? ` _active` : "")}>
+              <a href={getPageData('story').path} className={"menu_link" + (isStory ? ` _active` : "")}>
                 <span className="menu_arrow"></span>
                 <span className="menu_label"><span className="menu_label-s">ダイセルのセルロース</span>歴史と未来</span>
               </a>

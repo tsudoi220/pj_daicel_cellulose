@@ -2,14 +2,48 @@
 
 .historyItem {
   position: relative;
+  padding-top: 80px;
+  padding-bottom: 48px;
   @include mq("pc") {
+    display: flex;
+    gap: 0 80px;
+    align-items: center;
+    padding: 48px 0;
+  }
+}
+
+.historyItem_head {
+  position: relative;
+  width: 240px;
+  margin: 0 auto;
+  @include mq("pc") {
+    padding-left: 40px;
+  }
+}
+
+.historyItem_body {
+  position: relative;
+  @include mq("pc") {
+    flex: 1;
+  }
+  .historyItem_head + & {
+    padding-top: 32px;
+    @include mq("pc") {
+      padding-top: 0;
+    }
   }
 }
 
 .historyItem_year {
+  position: absolute;
+  top: -44px;
+  left: 0;
+  width: 100%;
   @include noto-serif;
   font-weight: 500;
+  text-align: center;
   @include mq("pc") {
+    top: -29px;
   }
 }
 

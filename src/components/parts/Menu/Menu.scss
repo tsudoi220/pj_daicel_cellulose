@@ -2,6 +2,7 @@
 
 .menu {
   color: var(--color-black);
+  transition: transform .2s ease-out;
   @include mq("pc") {
     
   }
@@ -10,12 +11,15 @@
 .menu_body {
   position: relative;
   .menu._fixed & {
-    position: fixed;
-    top: 56px;
-    left: 0;
     width: 100%;
     z-index: 100;
     background-color: rgba(#fff, 0.96);
+
+  }
+  .menu._home._fixed & {
+    position: fixed;
+    top: 56px;
+    left: 0;
     @include mq('pc') {
       top: 77px;
     }

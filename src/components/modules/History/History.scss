@@ -2,19 +2,21 @@
 
 .history {
   position: relative;
+  padding-top: 80px;
+  padding-bottom: 32px;
   background: url('/cellulose/images/bg.png') repeat 0 0;
   background-size: 400px 400px;
   @include mq("pc") {
-    padding-top: 135px;
+    padding-top: 160px;
     padding-bottom: 108px;
   }
 }
 
 .history_inner {
+  @include inner-sp;
   @include mq("pc") {
-    width: min(100%, 1168px);
+    @include inner-pc(1168);
     margin: 0 auto;
-    padding: 0 24px;
   }
 }
 
@@ -35,6 +37,7 @@
 
 .history_items {
   @include mq("pc") {
+    padding-top: 32px;
   }
   .history_text + & {
     @include mq("pc") {
@@ -45,11 +48,11 @@
 
 .history_items-group {
   @include mq("pc") {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0 80px;
-    padding-top: 23px;
-    padding-bottom: 46px;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // gap: 0 80px;
+    // padding-top: 23px;
+    // padding-bottom: 46px;
   }
   & + & {
     border-top: 1px solid #9fc7a1;
@@ -58,5 +61,8 @@
 
 .history_item {
   @include mq("pc") {
+  }
+  & + & {
+    border-top: 1px solid #98c3c1;
   }
 }

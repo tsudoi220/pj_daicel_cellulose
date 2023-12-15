@@ -7,30 +7,6 @@
     display: block;
   }
   &._message {
-    max-width: 314px;
-    margin: 0 auto;
-    @include mq("pc") {
-      width: 694px;
-      height: 228px;
-      max-width: 100%;
-      img {
-        width: 694px;
-        height: 228px;
-      }
-    }
-  }
-  &._about {
-    max-width: 396px;
-    margin: 0 auto;
-    @include mq("pc") {
-      width: 584px;
-      height: 136px;
-      max-width: 100%;
-      img {
-        width: 584px;
-        height: 136px;
-      }
-    }
   }
   &._features {
     @include noto-serif;
@@ -43,30 +19,48 @@
     @include mq("pc") {
     }
   }
-  &._learnMore {
-    max-width: 280px;
-    margin: 0 auto;
-    @include mq("pc") {
-      width: 584px;
-      max-width: 100%;
-      height: 32px;
-      img {
-        width: 584px;
-        height: 32px;
-      }
-    }
-  }
+  &._learnMore,
   &._history {
-    // max-width: 280px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  // &._learnMore {
+  //   max-width: 280px;
+  //   margin: 0 auto;
+  //   @include mq("pc") {
+  //     width: 584px;
+  //     max-width: 100%;
+  //     height: 32px;
+  //     img {
+  //       width: 584px;
+  //       height: 32px;
+  //     }
+  //   }
+  // }
+  &._history {
+    position: relative;
+    padding: 22px 0;
     @include mq("pc") {
-      width: 758px;
-      max-width: 100%;
-      height: 226px;
-      img {
-        width: 758px;
-        height: 226px;
-      }
+      padding: 42px 0;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid var(--color-green);
+      border-bottom: 1px solid var(--color-green);
+    }
+    &::before {
+      top: 4px;
+      height: calc(100% - 8px);
+    }
+    &::after {
+      height: 100%;
+      border-width: 2px;
+      border-color: var(--color-green);
     }
   }
   &._concept {
@@ -81,5 +75,166 @@
             height: 226px;
           }
         }
+  }
+}
+
+.heading_sub {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.heading_sub-label {
+  position: relative;
+  @include helvetica;
+  font-size: rem(13);
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: var(--color-light-green);
+  padding-left: 24px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 20px;
+    background: url('#{$img-dir}icon_tree_light-green.svg') 0 0 no-repeat;
+    background-size: contain;
+  }
+}
+
+.heading_pic {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  @include mq("pc") {
+    width: 100%;
+    height: auto;
+  }
+  .heading._message & {
+    width: 300px;
+    @include mq("pc") {
+      width: 682px;
+    }
+  }
+  .heading_sub + & {
+    margin-top: 44px;
+    @include mq("pc") {
+      margin-top: 42px;
+    }
+  }
+}
+
+.heading_label {
+  display: block;
+  @include noto-serif;
+  font-size: rem(56);
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--color-green);
+  @include mq("pc") {
+    line-height: 1.41;
+  }
+  .heading_sub + & {
+    margin-top: 28px;
+    @include mq("pc") {
+      margin-top: 24px;
+      font-size: rem(64);
+    }
+  }
+  .heading._story & {
+    font-size: rem(48);
+    @include mq("pc") {
+      font-size: rem(64);
+    }
+  }
+  .heading._learnMore &,
+  .heading._history & {
+    position: relative;
+    display: inline-block;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 29px;
+      height: 32px;
+      background: url('#{$img-dir}icon_tree.svg') 0 0 no-repeat;
+      background-size: contain;
+      transform: translateX(-50%);
+      @include mq("pc") {
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  .heading._learnMore & {
+    padding-top: 44px;
+    font-size: rem(28);
+    line-height: 1.43;
+    @include mq("pc") {
+      padding-top: 0;
+      padding-left: 24px;
+      font-size: rem(28);
+      line-height: 1.2;
+    }
+  }
+  .heading._history & {
+    position: relative;
+    padding-top: 44px;
+    font-size: rem(28);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.08px;
+    text-align: center;
+    color: var(--color-green);
+    @include mq("pc") {
+      padding-top: 0;
+      padding-left: 24px;
+      font-size: rem(32);
+      line-height: 1;
+    }
+  }
+  .heading._valueChain & {
+    font-size: rem(48);
+    @include mq("pc") {
+      font-size: rem(64);
+    }
+  }
+  .heading._valueChain-sub & {
+    font-size: rem(32);
+    letter-spacing: 0.08px;
+    line-height: 1.38;
+    @include mq("pc") {
+      line-height: 1.63;
+    }
+  }
+}
+
+.heading_label-narrow {
+  display: block;
+  letter-spacing: -0.1em;
+  @include mq("pc") {
+    display: inline-block;
+    letter-spacing: 0.02em;
+  }
+}
+
+.heading_label-inline {
+  display: block;
+  @include mq("pc") {
+    display: inline-block;
+  }
+  & + & {
+    @include mq("pc") {
+      margin-left: 12px;
+    }
   }
 }

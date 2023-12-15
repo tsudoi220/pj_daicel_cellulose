@@ -1,0 +1,61 @@
+@use "~/styles/global/" as *;
+
+.productsContents {
+  position: relative;
+  @include mq("pc") {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+.productsContents_head {
+
+}
+
+.productsContents_text {
+
+}
+
+.productsContents_list {
+  @include mq("pc") {
+    display: flex;
+    justify-content: center;
+    gap: 0 56px;
+  }
+  .productsContents_text + & {
+    @include mq("pc") {
+      margin-top: 88px;
+    }
+  }
+}
+
+.productsContents_list-item {
+  @include mq("pc") {
+    width: 128px;
+  }
+  > img {
+
+  }
+  > span {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    font-size: rem(15);
+    font-weight: 500;
+    line-height: 1.53;
+    text-align: center;
+    color: var(--color-black);
+  }
+}
+
+.productsContents_body {
+  @include mq("pc") {
+    @include inner-pc(1168);
+    margin: 0 auto;
+  }
+  .productsContents_head + & {
+    @include mq("pc") {
+      margin-top: 140px;
+    }
+  }
+}

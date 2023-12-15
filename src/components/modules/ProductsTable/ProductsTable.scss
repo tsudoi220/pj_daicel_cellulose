@@ -1,0 +1,175 @@
+@use "~/styles/global/" as *;
+
+.productsTable {
+  position: relative;
+  @include mq("pc") {
+    border-top: 2px solid var(--color-green);
+  }
+}
+
+.productsTable_head {
+  @include mq("pc") {
+    display: flex;
+    padding: 17px 0 19px;
+    background-color: #e0efe1;
+  }
+}
+
+.productsTable_head-item {
+  @include mq("pc") {
+    font-size: rem(15);
+    font-weight: 500;
+    line-height: 1.27;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+  &:nth-child(1) {
+    @include mq("pc") {
+      width: 260px;
+      padding-left: 20px;
+    }
+  }
+  &:nth-child(2) {
+    @include mq("pc") {
+      width: 300px;
+      padding-right: 40px;
+    }
+  }
+  &:nth-child(3) {
+    @include mq("pc") {
+      flex: 1;
+    }
+  }
+}
+
+.productsTable_body {
+  @include mq("pc") {
+  }
+}
+
+.productsTable_item {
+  @include mq("pc") {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+  }
+  & + & {
+    border-top: 1px solid var(--color-green);
+  }
+}
+
+.productsTable_purpose {
+  @include mq("pc") {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    width: 260px;
+    padding-left: 20px;
+  }
+}
+
+.productsTable_purpose-icon {
+  @include mq("pc") {
+    width: 56px;
+  }
+}
+
+.productsTable_name {
+  @include mq("pc") {
+    width: 300px;
+    padding-right: 40px;
+  }
+}
+
+.productsTable_des {
+  @include mq("pc") {
+    flex: 1;
+  }
+}
+
+.productsTable_link {
+  @include mq("pc") {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+  }
+}
+
+.productsTable_link-arrow {
+  @include arrow;
+  @include hover {
+    .productsTable_link:hover & {
+      &::before {
+        border-top: 1px solid var(--color-white);
+        border-right: 1px solid var(--color-white);
+      }
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.productsTable_link-label {
+  font-size: rem(17);
+  font-weight: 500;
+  line-height: 1.71;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--color-green);
+  @include mq("pc") {
+    flex: 1;
+  }
+}
+
+.productsTable_text {
+  @include mq("pc") {
+
+  }
+}
+
+.productsTable_example {
+  @include mq("pc") {
+
+  }
+  .productsTable_text + & {
+    @include mq("pc") {
+      margin-top: 20px;
+    }
+  }
+}
+
+.productsTable_example-term {
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: 1.38;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: var(--color-green);
+  @include mq("pc") {
+
+  }
+  &::before {
+    content: '＜';
+  }
+  &::after {
+    content: '＞';
+  }
+}
+
+.productsTable_example-des {
+  font-size: rem(15);
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  text-align: left;
+  @include mq("pc") {
+
+  }
+  .productsTable_example-term + & {
+    @include mq("pc") {
+      margin-top: 8px;
+    }
+  }
+}

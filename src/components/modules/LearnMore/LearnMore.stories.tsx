@@ -1,6 +1,6 @@
 import React from "react";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-
+import { LearnMoreDataList } from '~/constants/LearnMoreDataList'
 import { LearnMore } from "./LearnMore";
 
 export default {
@@ -15,4 +15,5 @@ const TemplateBasic: ComponentStory<typeof LearnMore> = (args) => (
 
 export const Basic = TemplateBasic.bind({});
 Basic.args = {
+  data: LearnMoreDataList
 };

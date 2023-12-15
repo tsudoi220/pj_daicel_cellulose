@@ -18,19 +18,23 @@ const HistoryItem = ({
 }: HistoryItemProps): JSX.Element | null => {
   return (
     <div className={"historyItem" + (classNames ? ` ${classNames}` : "")}>
-      <p className="historyItem_year">
-        <span className="historyItem_year-value">{year}</span>
-        <span className="historyItem_year-unit">年</span>
-      </p>
-      <picture className="historyItem_pic">
-        <img src={images.src} alt={images.alt} />
-      </picture>
-      {
-        heading && (
-          <h3 className="historyItem_heading" dangerouslySetInnerHTML={{__html: heading}}></h3>
-        )
-      }
-      <p className="historyItem_text" dangerouslySetInnerHTML={{__html: text}}></p>
+      <div className="historyItem_head">
+        <p className="historyItem_year">
+          <span className="historyItem_year-value">{year}</span>
+          <span className="historyItem_year-unit">年</span>
+        </p>
+        <picture className="historyItem_pic">
+          <img src={images.src} alt={images.alt} />
+        </picture>
+      </div>
+      <div className="historyItem_body">
+        {
+          heading && (
+            <h3 className="historyItem_heading" dangerouslySetInnerHTML={{__html: heading}}></h3>
+          )
+        }
+        <p className="historyItem_text" dangerouslySetInnerHTML={{__html: text}}></p>
+      </div>
     </div>
   );
 };

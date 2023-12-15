@@ -8,6 +8,7 @@ import { Message } from "~/components/modules/Message";
 import { PicturePanel } from "~/components/parts/PicturePanel";
 import { ZoomButton } from "~/components/parts/ZoomButton";
 import { About } from "~/components/modules/About";
+import { LearnMoreDataList } from '~/constants/LearnMoreDataList'
 import { LearnMore } from "~/components/modules/LearnMore";
 import { Modal } from '~/components/modules/Modal/'
 ---
@@ -15,7 +16,7 @@ import { Modal } from '~/components/modules/Modal/'
 <Layout id="home">
   <main class="main _home">
     <Movie classNames="main_movie" />
-    <Menu classNames="main_menu" isHome={true} data-menu />
+    <Menu classNames="main_menu _home" isHome={true} data-menu="home" />
     <Message classNames="main_message" />
     <PicturePanel classNames="main_circulation _circulation" data-scroll-animation>
       <div class="picturePanel_body">
@@ -29,7 +30,7 @@ import { Modal } from '~/components/modules/Modal/'
       </div>
     </PicturePanel>
     <About />
-    <LearnMore type="home" />
+    <LearnMore type="home" data={LearnMoreDataList} />
   </main>
   <Modal modalID="modal-concept-movie" classNames="_concept-movie">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Mc5M6FgMFPw?si=CxnzI4bW4yYLUV65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

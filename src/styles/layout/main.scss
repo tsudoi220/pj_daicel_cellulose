@@ -14,6 +14,15 @@
     // justify-content: center;
     min-height: 64px;
   }
+  &._page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    @include mq('pc') {
+    }
+  }
 }
 
 .main_message {

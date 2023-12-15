@@ -1,7 +1,6 @@
 import React from "react";
 import type { ComponentProp } from "~/components/@types/Component";
 import { Heading } from "~/components/parts/Heading";
-import { Text } from "~/components/parts/Text";
 import { HistoryItem } from "~/components/parts/HistoryItem";
 import "./History.scss";
 
@@ -14,12 +13,11 @@ const History = ({
     <section className={"history" + (classNames ? ` ${classNames}` : "")} >
       <div className="history_inner">
         <Heading as="h2" classNames="history_heading _history">
-          <picture>
-            <source srcSet="/cellulose/images/heading_history_sp.png" media="(max-width: 767px)" />
-            <img src="/cellulose/images/heading_history_pc.png" alt="セルロース100年の歴と進化し続ける技術" />
-          </picture>
+          <span className="heading_label">
+            <span className="heading_label-inline">ダイセルのセルロース</span>
+            <span className="heading_label-inline">100年の歴史</span>
+          </span>
         </Heading>
-        <Text classNames="history_text _center">植物由来化学素材セルロースの進化の歴史。<br />時代の要望に応えて「ダイセルのセルロース」は今なお飛躍的な進化を続けています。</Text>
         <div className="history_items">
           <div className="history_items-group">
             <div className="history_item">
@@ -29,7 +27,7 @@ const History = ({
                   alt: '',
                 }}
                 year="1919"
-                heading={`大日本セルロイド株式会社<br />（のちのダイセル）の誕生`}
+                heading={`大日本セルロイド株式会社（のちのダイセル）の誕生`}
                 text={`時世界中に需要があった植物由来の人工プラスチック「セルロイド」。そのセルロイド製造の競争が激化する中、日本国内８社のメーカーが原料であるクスノキの木の乱獲を防ぎ、未来を持続可能にするために合併しました。`}
               />
             </div>
