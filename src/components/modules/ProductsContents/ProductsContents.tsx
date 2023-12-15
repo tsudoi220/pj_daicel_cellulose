@@ -12,9 +12,9 @@ const ProductsContents = ({
   return (
     <div className={"productsContents" + (classNames ? ` ${classNames}` : "")} >
       <div className="productsContents_head">
-        <Text classNames="productsContents_text _center _wide-s _large" data-scroll-animation>ダイセルのセルロースは、<br />
-        多様な目的に合わせ緻密に特性をデザインすることで<br />
-        様々な製品に採用され社会に役立っていいます。</Text>
+        <Text classNames="productsContents_text _center _wide-s _large _productsContents" data-scroll-animation>ダイセルのセルロースは、<br />
+        多様な目的に合わせ<br className="_sp" />緻密に特性をデザインすることで<br />
+        様々な製品に採用され<br className="_sp" />社会に役立っていいます。</Text>
         <ul className="productsContents_list">
           <li className="productsContents_list-item">
             <img src="/cellulose/images/icon_medic.png" alt="" />

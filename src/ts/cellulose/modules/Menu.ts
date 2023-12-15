@@ -1,6 +1,7 @@
 export interface MenuProps {
   element: HTMLElement | null
   headerElement: HTMLElement | null
+  onClose?: () => void
 }
 
 type MenuType = 'home' | 'fixed'
@@ -10,9 +11,11 @@ export class Menu {
   public props: MenuProps = {
     element: null,
     headerElement: null,
+    onClose: () => {}
   }
 
   private type: MenuType = 'fixed'
+  private overlayElement: HTMLElement | null = null
 
   constructor(props: MenuProps) {
     Object.assign(this.props, props)
@@ -20,6 +23,7 @@ export class Menu {
 
   public init = (): void => {
     this.type = this.props.element?.getAttribute('data-menu') as MenuType || 'fixed'
+    this.overlayElement = document.querySelector('[data-menu-overlay]')
     this.addEvent()
     this.scroll()
   }
@@ -51,6 +55,11 @@ export class Menu {
   private addEvent = (): void => {
     window.addEventListener('scroll', this.scroll)
     window.addEventListener('resize', this.scroll)
+    if (this.overlayElement) {
+      this.overlayElement.addEventListener('click', () => {
+        this.props.onClose?.()
+      })
+    }
   }
 
 }

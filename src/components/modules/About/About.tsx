@@ -20,7 +20,7 @@ const About = ({
             <span className="heading_sub"><span className="heading_sub-label">About Cellulose</span></span>
             <span className="heading_label"><span className="heading_label-narrow">「セルロース」</span>とは</span>
           </Heading>
-          <Text classNames="about_text" data-scroll-animation>セルロースとは、木材などの植物の主成分であり、地球上で最も多く存在する化合物の一つです。自然由来の成分であるため、森林栽培などを通じて人が容易に入手できる素材であり、その柔軟な特性から工業用品から生活用品、また食品まで幅広い用途があります。遥か昔から私たちの身近に存在している素材であり、資源として持続可能な特性からも近年、改めて重要視されています。</Text>
+          <Text classNames="about_text" data-scroll-animation>セルロースとは、木材等の植物の主成分であり地球上に最も多く存在する化合物の一つです。自然由来の成分だから森林栽培などで人が容易に入手できる素材であり、その柔軟な特性から工業用品から身近な生活用品、また食品まで幅広い用途があり、遥か昔から身近な生活に存在している素材です。</Text>
         </div>
       </div>
       <div className="about_box">
@@ -57,7 +57,8 @@ const About = ({
                     衣類や健康食品にまで、<br />
                     人類はセルロースを<br className="_sp" />利用してきました。</p>
                   <picture className="picturePanel_pic">
-                    <img src="/cellulose/images/picture_panel_pic2.png" alt="" />
+                    <source srcSet="/cellulose/images/picture_panel_pic2_sp.png" media="(max-width: 767px)" />
+                    <img src="/cellulose/images/picture_panel_pic2_pc.png" alt="" />
                   </picture>
                 </div>
               </PicturePanel>
@@ -67,9 +68,16 @@ const About = ({
         </div>
       </div>
       <div className="about_foot">
-        <Text classNames="about_text _center _wide _large" data-scroll-animation>セルロースは、<br className="_sp" />微細な繊維状や粉末状、<br className="_sp" />液状に加工したり、<br />
-        化学構造をわずかに<br className="_sp" />変えたりすることで、<br className="_sp" />さまざまな中間素材や<br className="_sp" />製品に加工され、<br />
-        私たちの日常生活で<br className="_sp" />幅広く使用されています。</Text>
+        <Text classNames="about_text _center _wide _large" data-scroll-animation>
+          このセルロースを<br className="_sp" />
+          微細な繊維状にしたり、<br className="_sp" />
+          きめ細かな粉末状にしたり、<br />
+          液状にしたり、<br className="_sp" />
+          化学構造を少し変えたりすることで<br className="_sp" />
+          工業用材料にして、<br />
+          わたしたちの暮らしで<br className="_sp" />
+          多種多様に使われています。
+        </Text>
         <picture className="about_pic">
           <img src="/cellulose/images/features_pic0.png" alt="" data-scroll-animation />
         </picture>
@@ -77,6 +85,5 @@ const About = ({
     </section>
   );
 };
-
 
 export { About };

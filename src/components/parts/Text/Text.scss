@@ -24,14 +24,18 @@
     }
   }
   &._wide-s {
-    @include mq("pc") {
-      line-height: 2.29;
-    }
+    line-height: 2.29;
   }
   &._large {
     font-size: rem(19);
     @include mq("pc") {
       font-size: rem(21);
+    }
+    &._productsContents {
+      font-size: rem(21);
+      @include mq("pc") {
+        font-size: rem(21);
+      }
     }
   }
   & + & {

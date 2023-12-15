@@ -40,6 +40,11 @@ export class Accordion {
     this.content.removeEventListener('transitionend', this.slideUpEnd)
   }
 
+  public close = () => {
+    if (this.content.getAttribute('aria-hidden') === 'true') return
+    this.change()
+  }
+
   /*
   change
   */
@@ -104,7 +109,6 @@ export class Accordion {
   public init = () => {
     const id = this.props.trigger?.getAttribute('aria-controls') as string
     this.content = <HTMLElement>document.getElementById(id)
-    console.log('AAAAA', this.content, id)
     // this.closeButtonElement = <HTMLButtonElement>document.getElementById(id + '_close-btn')
     this.initContentStyle = this.setInitContentStyle(this.content)
     this.props.trigger?.addEventListener('click', () => {

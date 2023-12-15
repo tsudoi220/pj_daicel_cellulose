@@ -20,7 +20,9 @@ let layoutMode: string
 const modalList: {
   [key: string]: Modal
 } = {}
-const accordionList: Accordion[] = []
+const accordionList: {
+  [key: string]: Accordion
+} = {}
 
 // レイアウトの取得
 const getLayout = () => {
@@ -82,6 +84,9 @@ const createMenu = () => {
   menu = new Menu({
     element: element as HTMLElement,
     headerElement: document.getElementById('header') as HTMLElement,
+    onClose: () => {
+      accordionList['menu'].close()
+    }
   })
   menu.init()
 }
@@ -93,22 +98,25 @@ const createAccordion = () => {
   const nodelist = document.querySelectorAll('[data-accordion-summary]')
   if (nodelist.length === 0 || !nodelist) return false
   for (let i = 0; i < nodelist.length; i++) {
-    accordionList[i] = new Accordion({
-      trigger: nodelist[i] as HTMLButtonElement,
-      onSlideDownStart: () => {
-        // onSlideDownStart
-      },
-      onSlideDownEnd: () => {
-        // onSlideDownEnd
-      },
-      onSlideUpStart: () => {
-        // onSlideUpStart
-      },
-      onSlideUpEnd: () => {
-        // onSlideUpEnd
-      },
-    })
-    accordionList[i].init()
+    const name = nodelist[i].getAttribute('data-accordion-summary')
+    if (name) {
+      accordionList[name] = new Accordion({
+        trigger: nodelist[i] as HTMLButtonElement,
+        onSlideDownStart: () => {
+          // onSlideDownStart
+        },
+        onSlideDownEnd: () => {
+          // onSlideDownEnd
+        },
+        onSlideUpStart: () => {
+          // onSlideUpStart
+        },
+        onSlideUpEnd: () => {
+          // onSlideUpEnd
+        },
+      })
+      accordionList[name].init()
+    }
   }
 }
 

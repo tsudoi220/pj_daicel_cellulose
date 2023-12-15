@@ -2,8 +2,22 @@
 
 .productsTable {
   position: relative;
+  padding-top: 16px;
+  border-top: 2px solid var(--color-green);
   @include mq("pc") {
-    border-top: 2px solid var(--color-green);
+    padding-top: 0;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background-color: #e0efe1;
+    @include mq("pc") {
+      content: none;
+    }
   }
 }
 
@@ -48,10 +62,10 @@
 }
 
 .productsTable_item {
+  padding: 32px 0;
   @include mq("pc") {
     display: flex;
     align-items: center;
-    padding: 32px 0;
   }
   & + & {
     border-top: 1px solid var(--color-green);
@@ -59,16 +73,17 @@
 }
 
 .productsTable_purpose {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
   @include mq("pc") {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 8px;
     width: 260px;
     padding-left: 20px;
   }
 }
 
 .productsTable_purpose-icon {
+  width: 48px;
   @include mq("pc") {
     width: 56px;
   }
@@ -79,20 +94,32 @@
     width: 300px;
     padding-right: 40px;
   }
+  .productsTable_purpose + & {
+    margin-top: 24px;
+    @include mq("pc") {
+      margin-top: 0;
+    }
+  }
 }
 
 .productsTable_des {
   @include mq("pc") {
     flex: 1;
   }
+  .productsTable_name + & {
+    margin-top: 16px;
+    @include mq("pc") {
+      margin-top: 0;
+    }
+  }
 }
 
 .productsTable_link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
   @include mq("pc") {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 0 8px;
   }
 }
 
@@ -112,6 +139,7 @@
 }
 
 .productsTable_link-label {
+  flex: 1;
   font-size: rem(17);
   font-weight: 500;
   line-height: 1.71;
@@ -119,7 +147,7 @@
   text-align: left;
   color: var(--color-green);
   @include mq("pc") {
-    flex: 1;
+    
   }
 }
 
@@ -134,6 +162,7 @@
 
   }
   .productsTable_text + & {
+    margin-top: 24px;
     @include mq("pc") {
       margin-top: 20px;
     }
@@ -161,13 +190,14 @@
 .productsTable_example-des {
   font-size: rem(15);
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.73;
   letter-spacing: 0.08em;
   text-align: left;
   @include mq("pc") {
-
+    line-height: 1.8;
   }
   .productsTable_example-term + & {
+    margin-top: 4px;
     @include mq("pc") {
       margin-top: 8px;
     }

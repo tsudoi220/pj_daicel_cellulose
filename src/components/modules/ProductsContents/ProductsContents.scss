@@ -2,6 +2,8 @@
 
 .productsContents {
   position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
   @include mq("pc") {
     padding-top: 160px;
     padding-bottom: 160px;
@@ -17,12 +19,20 @@
 }
 
 .productsContents_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  gap: 32px 40px;
+  margin: 0 auto;
+  padding: 0 47px;
   @include mq("pc") {
     display: flex;
-    justify-content: center;
     gap: 0 56px;
+    padding: 0;
   }
   .productsContents_text + & {
+    margin-top: 84px;
     @include mq("pc") {
       margin-top: 88px;
     }
@@ -49,11 +59,13 @@
 }
 
 .productsContents_body {
+  @include inner-sp;;
   @include mq("pc") {
     @include inner-pc(1168);
     margin: 0 auto;
   }
   .productsContents_head + & {
+    margin-top: 100px;
     @include mq("pc") {
       margin-top: 140px;
     }

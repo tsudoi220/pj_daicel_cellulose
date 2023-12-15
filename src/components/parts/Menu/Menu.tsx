@@ -20,9 +20,31 @@ const Menu = ({
     <nav className={"menu" + (classNames ? ` ${classNames}` : "")} {...delegated}>
       <div className="menu_body">
         <div className="menu_button _sp">
-          <span className="menu_button-label">ダイセルのセルロース</span>
+          <span className="menu_button-label">
+            {
+              isHome && (
+                <>
+                  ダイセルのセルロース
+                </>
+              )
+            }
+            {
+              isProducts && (
+                <>
+                  <span>ダイセルのセルロース</span>製品
+                </>
+              )
+            }
+            {
+              isStory && (
+                <>
+                  <span>ダイセルのセルロース</span>歴史と未来
+                </>
+              )
+            }
+          </span>
           <button className="menu_button-icon" type="button" aria-controls="menu-content" aria-expanded="false" data-accordion-summary="menu"><span></span></button>
-          <div className="menu_overlay"></div>
+          <div className="menu_overlay" data-menu-overlay></div>
         </div>
         <div className="menu_content" id="menu-content" aria-hidden="true">
           <ul className="menu_list">

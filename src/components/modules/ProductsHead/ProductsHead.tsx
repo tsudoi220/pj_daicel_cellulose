@@ -13,10 +13,11 @@ const ProductsHead = ({
       <div className="productsHead_inner">
         <Heading as="h1" classNames="productsHead_heading _products" data-scroll-animation>
           <span className="heading_sub"><span className="heading_sub-label">Products</span></span>
-          <span className="heading_label">世の中の様々な場所で活躍する<br />ダイセルのセルロース</span>
+          <span className="heading_label">世の中の< br className="_sp" />様々な場所で< br className="_sp" />活躍する<br />ダイセルの< br className="_sp" />セルロース</span>
         </Heading>
         <picture className="productsHead_pic">
-          <img src="/cellulose/images/products_main_pic.jpg" alt="" />
+          <source srcSet="/cellulose/images/products_main_pic_sp.jpg" media="(max-width: 767px)" />
+          <img src="/cellulose/images/products_main_pic_pc.jpg" alt="" />
         </picture>
       </div>
     </div>
