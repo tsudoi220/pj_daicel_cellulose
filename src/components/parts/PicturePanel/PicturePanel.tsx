@@ -9,9 +9,10 @@ type PicturePanelProps = {
 const PicturePanel = ({
   children,
   classNames,
+  ...delegated
 }: PicturePanelProps): JSX.Element | null => {
   return (
-    <div className={"picturePanel" + (classNames ? ` ${classNames}` : "")} >
+    <div className={"picturePanel" + (classNames ? ` ${classNames}` : "")} {...delegated}>
       {children}
     </div>
   );

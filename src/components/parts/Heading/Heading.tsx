@@ -11,9 +11,10 @@ const Heading = ({
   as: CustomTag = "h1",
   children,
   classNames,
+  ...delegated
 }: HeadingProps): JSX.Element | null => {
   return (
-    <CustomTag className={"heading" + (classNames ? ` ${classNames}` : "")} >
+    <CustomTag className={"heading" + (classNames ? ` ${classNames}` : "")} {...delegated}>
       {children}
     </CustomTag>
   );

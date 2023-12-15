@@ -16,11 +16,15 @@
 }
 
 .features_heading {
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
   }
 }
 
 .features_text {
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
   }
   .features_heading + & {

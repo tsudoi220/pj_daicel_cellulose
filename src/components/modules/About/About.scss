@@ -26,11 +26,15 @@
 }
 
 .about_heading {
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
   }
 }
 
 .about_text {
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
   }
   .about_heading + & {
@@ -93,6 +97,8 @@
 }
 
 .about_panel {
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
     height: 480px;
   }
@@ -150,6 +156,10 @@
     @include mq("pc") {
       margin-top: 120px;
     }
+  }
+  > img {
+    opacity: 0;
+    @include imgSlideZoomIn;
   }
 }
 

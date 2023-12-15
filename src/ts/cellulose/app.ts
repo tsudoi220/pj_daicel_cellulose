@@ -2,6 +2,10 @@ import { Accordion } from './modules/Accordion'
 import { Modal } from './modules/Modal'
 import { Menu } from './modules/Menu'
 
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
 // let gnavElement!: HTMLElement | null
 // let innerElement!: HTMLElement | null
 // let siteHeaderElement!: HTMLElement | null
@@ -109,6 +113,47 @@ const createAccordion = () => {
 }
 
 /*
+スクロールアニメーション
+*/
+const setAnimationElement = (element: HTMLElement): void => {
+  const type = element.getAttribute('data-scroll-animation')
+  const start = 'top 80%'
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: element,
+      start: start,
+      end: 'top top',
+      onEnter: ({ trigger, progress, direction, isActive }) => {
+        if (!element.classList.contains('_animation')) {
+          element.classList.add('_animation')
+        }
+      },
+      onEnterBack: ({ trigger, progress, direction, isActive }) => {
+        if (!element.classList.contains('_animation')) {
+          element.classList.add('_animation')
+        }
+      },
+      onLeaveBack: ({ trigger, progress, direction, isActive }) => {
+        if (!element.classList.contains('_animation')) {
+          element.classList.add('_animation')
+        }
+      },
+    },
+  })
+}
+
+/*
+アニメーション設定
+*/
+const setAnimationNodeList = (): void => {
+  const nodeList = document.querySelectorAll('[data-scroll-animation]')
+  for (let i = 0; i < nodeList.length; i++) {
+    const element = nodeList[i] as HTMLElement
+    setAnimationElement(element)
+  }
+}
+
+/*
 初期設定
 */
 const init = () => {
@@ -116,6 +161,7 @@ const init = () => {
   createModal()
   createMenu()
   createAccordion()
+  setAnimationNodeList()
   window.addEventListener('resize', resize)
   // window.addEventListener('scroll', scroll)
   // scroll()

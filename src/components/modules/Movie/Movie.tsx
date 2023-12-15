@@ -11,7 +11,7 @@ const Movie = ({
   return (
     <div className={"movie" + (classNames ? ` ${classNames}` : "")} >
       <figure className="movie_item">
-        <video src="/cellulose/movie/concept_movie.mp4"></video>
+        <video src="/cellulose/movie/concept_movie.mp4" autoPlay muted playsInline loop></video>
       </figure>
       <div className="movie_body">
         <div className="movie_inner">

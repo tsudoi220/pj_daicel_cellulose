@@ -51,7 +51,7 @@
 }
 
 @mixin slideIn {
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   &._animation {
@@ -65,6 +65,26 @@
   animation-fill-mode: both;
   &._animation {
     animation-name: imgSlideIn;
+  }
+}
+
+@mixin imgSlideZoomIn {
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  &._animation {
+    animation-name: imgSlideZoomIn;
+  }
+}
+
+@keyframes imgSlideZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 

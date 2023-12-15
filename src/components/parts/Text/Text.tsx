@@ -9,9 +9,10 @@ type TextProps = {
 const Text = ({
   children,
   classNames,
+  ...delegated
 }: TextProps): JSX.Element | null => {
   return (
-    <p className={"text" + (classNames ? ` ${classNames}` : "")} >
+    <p className={"text" + (classNames ? ` ${classNames}` : "")} {...delegated}>
       {children}
     </p>
   );

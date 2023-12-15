@@ -16,6 +16,8 @@
 }
 
 .message_heading {
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
   }
 }
@@ -29,6 +31,11 @@
       padding-top: 135px;
     }
   }
+}
+
+.message_text {
+  opacity: 0;
+  @include slideIn;
 }
 
 .message_pic {
@@ -71,5 +78,9 @@
       height: 640px;
       transform: none;
     }
+  }
+  > img {
+    opacity: 0;
+    @include imgSlideZoomIn;
   }
 }

@@ -17,7 +17,7 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/preset-create-react-app',
     '@whitespace/storybook-addon-html',
-    '@storybook/addon-viewport',
+    // '@storybook/addon-viewport',
     {
       name: '@storybook/addon-storysource',
       options: {
