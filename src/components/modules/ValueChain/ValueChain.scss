@@ -19,13 +19,13 @@
 }
 
 .valueChain_heading {
-  @include mq("pc") {
-  }
+  opacity: 0;
+  @include slideIn;
 }
 
 .valueChain_text {
-  @include mq("pc") {
-  }
+  opacity: 0;
+  @include slideIn;
   .valueChain_heading + & {
     margin-top: 56px;
     @include mq("pc") {
@@ -48,6 +48,8 @@
   overflow: hidden;
   border-radius: 8px;
   line-height: 1;
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
 
   }

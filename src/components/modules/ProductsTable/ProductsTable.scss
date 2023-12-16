@@ -2,10 +2,17 @@
 
 .productsTable {
   position: relative;
+}
+
+.productsTable_head {
   padding-top: 16px;
   border-top: 2px solid var(--color-green);
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
-    padding-top: 0;
+    display: flex;
+    padding: 17px 0 19px;
+    background-color: #e0efe1;
   }
   &::before {
     content: '';
@@ -18,14 +25,6 @@
     @include mq("pc") {
       content: none;
     }
-  }
-}
-
-.productsTable_head {
-  @include mq("pc") {
-    display: flex;
-    padding: 17px 0 19px;
-    background-color: #e0efe1;
   }
 }
 
@@ -63,6 +62,8 @@
 
 .productsTable_item {
   padding: 32px 0;
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
     display: flex;
     align-items: center;

@@ -15,7 +15,8 @@
 }
 
 .productsContents_text {
-
+  opacity: 0;
+  @include slideIn;
 }
 
 .productsContents_list {
@@ -40,6 +41,8 @@
 }
 
 .productsContents_list-item {
+  opacity: 0;
+  @include slideIn;
   @include mq("pc") {
     width: 128px;
   }

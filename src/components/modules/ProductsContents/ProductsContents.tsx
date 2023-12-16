@@ -14,27 +14,27 @@ const ProductsContents = ({
       <div className="productsContents_head">
         <Text classNames="productsContents_text _center _wide-s _large _productsContents" data-scroll-animation>ダイセルのセルロースは、<br />
         多様な目的に合わせ<br className="_sp" />緻密に特性をデザインすることで<br />
-        様々な製品に採用され<br className="_sp" />社会に役立っていいます。</Text>
+        様々な製品に採用され<br className="_sp" />社会に役立っています。</Text>
         <ul className="productsContents_list">
-          <li className="productsContents_list-item">
-            <img src="/cellulose/images/icon_medic.png" alt="" />
-            <span>メディカル /<br />ヘルスケア</span>
+          <li className="productsContents_list-item" data-scroll-animation>
+            <img src="/cellulose/images/icon_medic.png" alt="ライフサイエンス" />
+            <span>ライフサイエンス</span>
           </li>
-          <li className="productsContents_list-item">
-            <img src="/cellulose/images/icon_car.png" alt="" />
+          <li className="productsContents_list-item" data-scroll-animation>
+            <img src="/cellulose/images/icon_car.png" alt="自動車" />
             <span>自動車</span>
           </li>
-          <li className="productsContents_list-item">
-            <img src="/cellulose/images/icon_elec.png" alt="" />
-            <span>電気 / 電子</span>
+          <li className="productsContents_list-item" data-scroll-animation>
+            <img src="/cellulose/images/icon_elec.png" alt="電機 / 電子" />
+            <span>電機 / 電子</span>
           </li>
-          <li className="productsContents_list-item">
-            <img src="/cellulose/images/icon_ippan.png" alt="" />
+          <li className="productsContents_list-item" data-scroll-animation>
+            <img src="/cellulose/images/icon_ippan.png" alt="一般産業" />
             <span>一般産業</span>
           </li>
-          <li className="productsContents_list-item">
-            <img src="/cellulose/images/icon_daily.png" alt="" />
-            <span>日常品</span>
+          <li className="productsContents_list-item" data-scroll-animation>
+            <img src="/cellulose/images/icon_daily.png" alt="日用品" />
+            <span>日用品</span>
           </li>
         </ul>
       </div>

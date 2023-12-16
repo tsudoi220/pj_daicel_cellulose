@@ -21,7 +21,7 @@ const ValueChain = ({
           <Heading as="h3" classNames="valueChain_heading _valueChain-sub" data-scroll-animation>
             <span className="heading_label">持続可能な<br className="_sp" />循環型の産業生態系<br />バイオマス<br className="_sp" />バリューチェーン構想</span>
           </Heading>
-          <div className="valueChain_movie">
+          <div className="valueChain_movie" data-scroll-animation>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/osB0tWUlANE?si=4-uH40MjGrNTy8D1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
         </section>

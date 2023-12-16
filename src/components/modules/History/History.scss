@@ -21,8 +21,8 @@
 }
 
 .history_heading {
-  @include mq("pc") {
-  }
+  opacity: 0;
+  @include slideIn;
 }
 
 .history_text {
@@ -46,22 +46,9 @@
   }
 }
 
-.history_items-group {
-  @include mq("pc") {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // gap: 0 80px;
-    // padding-top: 23px;
-    // padding-bottom: 46px;
-  }
-  & + & {
-    border-top: 1px solid #9fc7a1;
-  }
-}
-
 .history_item {
-  @include mq("pc") {
-  }
+  opacity: 0;
+  @include slideIn;
   & + & {
     border-top: 1px solid #98c3c1;
   }

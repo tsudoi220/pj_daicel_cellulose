@@ -32,7 +32,7 @@ const About = ({
                 <div className="picturePanel_body">
                   <h3 className="picturePanel_heading">木の構造と3つの成分</h3>
                   <picture className="picturePanel_pic">
-                    <img src="/cellulose/images/picture_panel_pic0.png" alt="" />
+                    <img src="/cellulose/images/picture_panel_pic0.png" alt="木の構造と3つの成分" />
                   </picture>
                 </div>
                 <ZoomButton classNames="about_zoom-button" data-modal-button="open" aria-controls="modal-about-01" aria-expanded="false" />
@@ -44,7 +44,7 @@ const About = ({
                 <div className="picturePanel_body">
                   <h3 className="picturePanel_heading">木材の成分構成比</h3>
                   <picture className="picturePanel_pic">
-                    <img src="/cellulose/images/picture_panel_pic1.png" alt="" />
+                    <img src="/cellulose/images/picture_panel_pic1.png" alt="木材の成分構成比" />
                   </picture>
                 </div>
               </PicturePanel>
@@ -58,7 +58,7 @@ const About = ({
                     人類はセルロースを<br className="_sp" />利用してきました。</p>
                   <picture className="picturePanel_pic">
                     <source srcSet="/cellulose/images/picture_panel_pic2_sp.png" media="(max-width: 767px)" />
-                    <img src="/cellulose/images/picture_panel_pic2_pc.png" alt="" />
+                    <img src="/cellulose/images/picture_panel_pic2_pc.png" alt="建材 綿 紙 衣類 食物繊維" />
                   </picture>
                 </div>
               </PicturePanel>

@@ -17,7 +17,7 @@ const ProductsHead = ({
         </Heading>
         <picture className="productsHead_pic">
           <source srcSet="/cellulose/images/products_main_pic_sp.jpg" media="(max-width: 767px)" />
-          <img src="/cellulose/images/products_main_pic_pc.jpg" alt="" />
+          <img src="/cellulose/images/products_main_pic_pc.jpg" alt="" data-scroll-animation />
         </picture>
       </div>
     </div>

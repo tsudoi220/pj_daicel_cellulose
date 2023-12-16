@@ -19,12 +19,13 @@
 }
 
 .storyHead_heading {
-  @include mq("pc") {
-
-  }
+  opacity: 0;
+  @include slideIn;
 }
 
 .storyHead_text {
+  opacity: 0;
+  @include slideIn;
   .storyHead_heading + & {
     margin-top: 80px;
     @include mq("pc") {
