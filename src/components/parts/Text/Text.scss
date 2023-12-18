@@ -38,6 +38,12 @@
       }
     }
   }
+  &._storyHead {
+    font-size: rem(21);
+    @include mq("pc") {
+      font-size: rem(21);
+    }
+  }
   & + & {
     margin-top: 42px;
     @include mq("pc") {

@@ -150,7 +150,7 @@
 
 .modal_content {
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
   // padding: 0 0 rem(20);
   .modal._concept-movie & {
     aspect-ratio: 16 / 9;
