@@ -37,7 +37,7 @@ export const metaData: metaDataType = {
     domain: 'https://www.daicel.com',
     favicon: '/common_img/symbol/favicon.ico',
     ogp: '/cellulose/images/ogp.jpg',
-    site_name: "",
+    site_name: "ダイセルのセルロース｜株式会社ダイセル",
     locale: "ja_JP",
     google_site_verification: "X6qxvrd-njryOQSyvNZVPsGIRMRjK0-w8SzUfIbVP_o",
     android_touch_icon: "/cellulose/images/android-touch-icon.png",
