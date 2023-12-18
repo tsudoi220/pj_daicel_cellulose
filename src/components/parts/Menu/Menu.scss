@@ -259,6 +259,10 @@
       }
     }
   }
+  &:active,
+  &:focus {
+    color: var(--color-green);
+  }
 }
 
 .menu_label {
