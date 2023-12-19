@@ -21,8 +21,7 @@ const Message = ({
         </Heading>
         <div className="message_body">
           <Text classNames="message_text _center _wide _large" data-scroll-animation>
-            地球温暖化…<br className="_sp" />
-            プラスチックによる海洋汚染…<br />
+            地球温暖化…<br className="_sp" />プラスチックによる海洋汚染…<br />
             石油依存が招いた人類の問題も、<br className="_sp" />
             木材ならきっと解ける。
           </Text>

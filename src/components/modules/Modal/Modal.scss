@@ -134,7 +134,6 @@
   position: relative;
   width: per(368, 390);
   // width: calc(100% - rem(40));
-  // padding: 0 rem(20);
   // background-color: var(--color-white);
   @include mq('pc') {
     width: auto;
@@ -151,7 +150,6 @@
 .modal_content {
   height: 100%;
   overflow: auto;
-  // padding: 0 0 rem(20);
   .modal._concept-movie & {
     aspect-ratio: 16 / 9;
     > iframe {
@@ -187,8 +185,17 @@
     padding: 0;
   }
   &._about01 {
+    width: 748px;
+    height: 536px;
+    padding: 40px;
+    @include mq('pc') {
+      width: 900px;
+      height: 600px;
+      padding: 0;
+    }
     img {
-      width: per(335, 370);
+      width: 100%;
+      height: auto;
       @include mq('pc') {
         width: 100%;
         max-width: 670px;
@@ -197,12 +204,30 @@
   }
   &._circulation {
     background-color: #84C8C6;
+    width: 923px;
+    height: 708px;
+    padding: 40px;
+    @include mq('pc') {
+      width: 900px;
+      height: 600px;
+      padding: 0;
+    }
     img {
-      width: per(340, 370);
+      width: 100%;
+      height: auto;
       @include mq('pc') {
         width: 100%;
         max-width: 670px;
       }
     }
+  }
+}
+
+.modal_pic-scroll {
+  position: relative;
+  overflow: auto;
+  border-radius: 16px;
+  @include mq('pc') {
+    overflow: hidden;
   }
 }

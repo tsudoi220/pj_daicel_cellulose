@@ -25,7 +25,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">アセテート繊維</span>
             </a>
@@ -47,7 +47,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">ACETY® アセチ®</span>
             </a>
@@ -72,7 +72,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/business/new-solution/actranza/" className="productsTable_link">
+            <a href="https://www.daicel.com/business/new-solution/actranza/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">Actranza® lab.<br />アクトランザ® ラボ</span>
             </a>
@@ -97,7 +97,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicelmiraizu.com/" className="productsTable_link">
+            <a href="https://www.daicelmiraizu.com/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">CMC（カルボキシメチルセルロース）</span>
             </a>
@@ -122,7 +122,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/cellulose/marine_biodegradable.html" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/cellulose/marine_biodegradable.html" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">CAFBLO®<br />キャフブロ®</span>
             </a>
@@ -149,7 +149,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicelchiral.com/" className="productsTable_link">
+            <a href="https://www.daicelchiral.com/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">CHIRALCEL®<br />キラルセル®<br />CHIRAKPAK®<br />キラルパック®</span>
             </a>
@@ -171,7 +171,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/lifesciences/excipients/" className="productsTable_link">
+            <a href="https://www.daicel.com/lifesciences/excipients/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">GRANFILLER-D®</span>
             </a>
@@ -196,7 +196,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">Sylphlace®<br />シルフレース®</span>
             </a>
@@ -218,7 +218,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">Cigatow（シガートウ）</span>
             </a>
@@ -240,7 +240,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">ジアセテート・フレーク</span>
             </a>
@@ -268,7 +268,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicelmiraizu.com/business/wsp/microfibrillated/" className="productsTable_link">
+            <a href="https://www.daicelmiraizu.com/business/wsp/microfibrillated/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">セリッシュ</span>
             </a>
@@ -296,7 +296,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/application/index.html" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/application/index.html" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">TACフレーク（トリアセチルセルロース）</span>
             </a>
@@ -324,7 +324,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/application/index.html" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/application/index.html" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">TACフレーク（トリアセチルセルロース）</span>
             </a>
@@ -346,7 +346,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/safety/" className="productsTable_link">
+            <a href="https://www.daicel.com/safety/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">DAISI® シートベルトプリテンショナー用ガス発生器（PGG）</span>
             </a>
@@ -368,7 +368,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/smart/semiconductor/group/selective-functionalization/" className="productsTable_link">
+            <a href="https://www.daicel.com/smart/semiconductor/group/selective-functionalization/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">ナノひっつき虫™</span>
             </a>
@@ -390,7 +390,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/lifesciences/excipients/" className="productsTable_link">
+            <a href="https://www.daicel.com/lifesciences/excipients/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">HiSORAD®</span>
             </a>
@@ -418,7 +418,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicelmiraizu.com/business/wsp/hec-daicel/" className="productsTable_link">
+            <a href="https://www.daicelmiraizu.com/business/wsp/hec-daicel/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">HEC:ヒドロキシエチルセルロース</span>
             </a>
@@ -443,7 +443,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.polyplastics-global.com/jp/product/plastron.html" className="productsTable_link">
+            <a href="https://www.polyplastics-global.com/jp/product/plastron.html" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">プラストロン</span>
             </a>
@@ -468,7 +468,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://www.daicel.com/cell_ac/cellulose/cosmetic.html" className="productsTable_link">
+            <a href="https://www.daicel.com/cell_ac/cellulose/cosmetic.html" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">BELLOCEA®<br />ベロセア®</span>
             </a>
@@ -496,7 +496,7 @@ const ProductsTable = ({
             </div>
           </div>
           <div className="productsTable_name">
-            <a href="https://daicen.com/company/" className="productsTable_link">
+            <a href="https://daicen.com/company/" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
               <span className="productsTable_link-label">MOLSEP®<br />モルサップ®</span>
             </a>

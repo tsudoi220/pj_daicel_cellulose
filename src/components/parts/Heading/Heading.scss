@@ -222,7 +222,7 @@
 
 .heading_label-narrow {
   display: block;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.15em;
   @include mq("pc") {
     display: inline-block;
     letter-spacing: 0.02em;
