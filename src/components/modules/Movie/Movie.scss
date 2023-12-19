@@ -20,7 +20,8 @@
     width: 100%;
     aspect-ratio: 1440 / 810;
   }
-  > video {
+  > video,
+  > iframe {
     position: absolute;
     left: 50%;
     height: 100%;

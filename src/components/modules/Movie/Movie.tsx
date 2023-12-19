@@ -11,7 +11,8 @@ const Movie = ({
   return (
     <div className={"movie" + (classNames ? ` ${classNames}` : "")} >
       <figure className="movie_item">
-        <video src="/cellulose/movie/concept_movie.mp4" autoPlay muted playsInline loop></video>
+        {/* <video src="/cellulose/movie/concept_movie.mp4" autoPlay muted playsInline loop></video> */}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Mc5M6FgMFPw?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=Mc5M6FgMFPw" title="2023_TV-CM_「マイクロ産業革命」篇" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </figure>
       <div className="movie_body">
         <div className="movie_inner">
