@@ -29,7 +29,7 @@
     margin: 0;
     padding: 0;
     line-height: 1;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(2.2);
     @include mq("pc") {
       position: relative;
       left: 0;
