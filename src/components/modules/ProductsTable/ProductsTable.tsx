@@ -103,7 +103,7 @@ const ProductsTable = ({
             </a>
           </div>
           <div className="productsTable_des">
-            <Text classNames="productsTable_text">増粘剤、乳化安定剤、バインダーとして 幅広い分野に使用されるセルロース系水溶性高分子</Text>
+            <Text classNames="productsTable_text">増粘剤、乳化安定剤、バインダーとして幅広い分野に使用されるセルロース系水溶性高分子</Text>
             <dl className="productsTable_example">
               <dt className="productsTable_example-term">身近な製品例</dt>
               <dd className="productsTable_example-des">衛生品（湿布薬）、電池（負極板用バインダー）、食品（乳蛋白の分散）、香粧品（染毛材の増粘）</dd>
@@ -424,7 +424,7 @@ const ProductsTable = ({
             </a>
           </div>
           <div className="productsTable_des">
-            <Text classNames="productsTable_text">セルロースを化学修飾して水溶性をもたせた高分子化合物。増粘、懸濁、保護コロイドなどの 機能を持ち、水溶液は優れた耐ｐＨ性、耐塩性、耐薬品性を持つ。</Text>
+            <Text classNames="productsTable_text">セルロースを化学修飾して水溶性をもたせた高分子化合物。増粘、懸濁、保護コロイドなどの機能を持ち、水溶液は優れた耐ｐＨ性、耐塩性、耐薬品性を持つ。</Text>
             <dl className="productsTable_example">
               <dt className="productsTable_example-term">身近な製品例</dt>
               <dd className="productsTable_example-des">電材、衛生品、自動車、香粧品</dd>

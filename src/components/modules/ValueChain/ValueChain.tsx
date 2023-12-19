@@ -22,7 +22,7 @@ const ValueChain = ({
             <span className="heading_label">持続可能な<br className="_sp" />循環型の産業生態系<br />バイオマス<br className="_sp" />バリューチェーン構想</span>
           </Heading>
           <div className="valueChain_movie" data-scroll-animation>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/osB0tWUlANE" title="Biomass Value Chain | バイオマスバリューチェーン" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/osB0tWUlANE?rel=0" title="Biomass Value Chain | バイオマスバリューチェーン" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
         </section>
       </div>

@@ -132,7 +132,7 @@
 
 .modal_body {
   position: relative;
-  width: per(368, 390);
+  width: per(320, 390);
   // width: calc(100% - rem(40));
   // background-color: var(--color-white);
   @include mq('pc') {
@@ -141,6 +141,7 @@
     padding: 0;
   }
   .modal._concept-movie & {
+    width: per(368, 390);
     @include mq('pc') {
       @include inner-pc(1008)
     }
@@ -204,8 +205,8 @@
   }
   &._circulation {
     background-color: #84C8C6;
-    width: 923px;
-    height: 708px;
+    width: 699px;
+    height: 536px;
     padding: 40px;
     @include mq('pc') {
       width: 900px;
