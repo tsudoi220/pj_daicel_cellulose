@@ -25,5 +25,4 @@ const StoryHead = ({
   );
 };
 
-
 export { StoryHead };

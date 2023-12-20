@@ -51,7 +51,6 @@
   opacity: 0;
   @include slideIn;
   @include mq("pc") {
-
   }
   > iframe {
     width: 100%;
