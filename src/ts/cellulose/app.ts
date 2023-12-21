@@ -48,9 +48,12 @@ const openModal = (modalId: string): void => {
 }
 
 // モーダルを閉じる SP→PC
-const closeModal = () => {
-  for (const key in modalList) {
-    modalList[key].close()
+const closeModal = (modalId: string): void => {
+  // for (const key in modalList) {
+  //   modalList[key].close()
+  // }
+  if (modalId === 'modal-concept-movie') {
+
   }
 }
 
@@ -68,8 +71,9 @@ const createModal = () => {
           const modalId = element.getAttribute('data-modal')
           if (modalId) openModal(modalId)
         },
-        onClose: () => {
-          //
+        onClose: (element: HTMLElement) => {
+          const modalId = element.getAttribute('data-modal')
+          if (modalId) closeModal(modalId)
         },
       })
       modalList[name].init()

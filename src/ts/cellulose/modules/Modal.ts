@@ -32,6 +32,8 @@ export class Modal {
   private bodyElement!: HTMLElement | null
   private closeButton!: ModalButton
 
+  private youtubeHTML = ''
+
   constructor(options: ModalOptions) {
     Object.assign(this.options, options)
   }
@@ -49,7 +51,12 @@ export class Modal {
     this.isAnimate = true
     this.updateOpenButton(false)
     if (!this.content) return
+    const modalId = this.options.element?.getAttribute('data-modal')
     this.content.open()
+    if (modalId === 'modal-concept-movie' && this.contentElement) {
+      this.contentElement.innerHTML = ''
+      this.contentElement.innerHTML = this.youtubeHTML
+    }
     if (this.scrollElement) this.scrollElement.scrollTop = 0
     ;(document.getElementsByTagName('html')[0] as HTMLHtmlElement).classList.add('_modal-open')
     // this.options.onOpen(this.options.element)
@@ -63,7 +70,11 @@ export class Modal {
     this.isOpen = false
     this.isAnimate = true
     if (!this.content.isAnimate) {
+      const modalId = this.options.element.getAttribute('data-modal')
       this.content.close()
+      if (modalId === 'modal-concept-movie' && this.contentElement) {
+        this.contentElement.innerHTML = ''
+      }
       ;(document.getElementsByTagName('html')[0] as HTMLHtmlElement).classList.remove('_modal-open')
       this.options.onClose(this.options.element)
     }
@@ -105,6 +116,12 @@ export class Modal {
     this.setModalContent(element)
     this.addEvent()
     this.resize()
+
+    const modalId = element.getAttribute('data-modal')
+    if (modalId === 'modal-concept-movie' && this.contentElement) {
+      this.youtubeHTML = this.contentElement.innerHTML
+    }
+
   }
 
   // モーダルコンテンツの設定
