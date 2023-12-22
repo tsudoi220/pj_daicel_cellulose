@@ -36,7 +36,7 @@ const LearnMore = ({
                             <span className="learnMore_title-arrow"></span>
                             <span className="learnMore_title-label" dangerouslySetInnerHTML={{__html: data[key].title_html}}></span>
                           </p>
-                          <p className="learnMore_text">{data[key].text}</p>
+                          {/* <p className="learnMore_text">{data[key].text}</p> */}
                         </a>
                       </li>
                     )

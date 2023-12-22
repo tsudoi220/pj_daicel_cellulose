@@ -37,7 +37,7 @@ const FeaturesList = ({
         <span className="featuresList_label">水に混ざりやすい<span>（親水性）</span></span>
       </li>
       <li className="featuresList_item" data-scroll-animation>
-        <span className="featuresList_label">油に混ざりやすい<span>（新油性）</span></span>
+        <span className="featuresList_label">油に混ざりやすい<span>（親油性）</span></span>
       </li>
       <li className="featuresList_item" data-scroll-animation>
         <span className="featuresList_label">リサイクル利用可能</span>

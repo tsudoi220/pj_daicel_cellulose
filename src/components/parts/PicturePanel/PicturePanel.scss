@@ -63,10 +63,10 @@
   .picturePanel._about01 &,
   .picturePanel._about02 &,
   .picturePanel._about03 & {
-    padding-top: 56px;
+    padding-top: 40px;
     @include mq("pc") {
       height: 480px;
-      padding-top: 56px;
+      padding-top: 34px;
       padding-bottom: 0;
     }
   }
@@ -137,6 +137,25 @@
         left: 0;
         transform: none;
       }
+    }
+  }
+}
+
+.picturePanel_lead {
+  width: 100%;
+  font-size: rem(17);
+  font-weight: bold;
+  text-align: center;
+  &::before {
+    content: '- ';
+  }
+  &::after {
+    content: ' -';
+  }
+  .picturePanel_heading + & {
+    margin-top: 31px;
+    @include mq("pc") {
+      margin-top: 7px;
     }
   }
 }
