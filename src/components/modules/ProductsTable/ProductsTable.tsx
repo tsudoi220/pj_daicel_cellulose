@@ -12,7 +12,7 @@ const ProductsTable = ({
     <div className={"productsTable" + (classNames ? ` ${classNames}` : "")}>
       <div className="productsTable_head" data-scroll-animation>
         <div className="productsTable_head-item _pc">用途 / 分野</div>
-        <div className="productsTable_head-item _pc">製品名</div>
+        <div className="productsTable_head-item _pc">製品名（五十音順）</div>
         <div className="productsTable_head-item _pc">説明</div>
       </div>
       <div className="productsTable_body">
@@ -497,7 +497,7 @@ const ProductsTable = ({
             <Text classNames="productsTable_text">化粧品用球状粒子。平滑な表面をもつ真球状で、滑らかな触感を実現。</Text>
             <dl className="productsTable_example">
               <dt className="productsTable_example-term">身近な製品例</dt>
-              <dd className="productsTable_example-des">コスメ</dd>
+              <dd className="productsTable_example-des">コスメ用品（ファンデーションなど）</dd>
             </dl>
           </div>
         </div>
