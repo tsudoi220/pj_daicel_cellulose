@@ -122,6 +122,12 @@
   gap: 0 8px;
   @include mq("pc") {
   }
+  & + & {
+    margin-top: 8px;
+    @include mq("pc") {
+      margin-top: 16px;
+    }
+  }
 }
 
 .productsTable_link-arrow {
