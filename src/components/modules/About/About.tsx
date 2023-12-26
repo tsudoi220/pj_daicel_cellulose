@@ -61,7 +61,7 @@ const About = ({
                     人類はセルロースを<br className="_sp" />利用してきました。</p>
                   <picture className="picturePanel_pic">
                     <source srcSet="/cellulose/images/picture_panel_pic2_sp.png" media="(max-width: 767px)" />
-                    <img src="/cellulose/images/picture_panel_pic2_pc.png" alt="建材 綿 紙 衣類 食物繊維" />
+                    <img src="/cellulose/images/picture_panel_pic2_pc.png" alt="建材・木工材料 綿 紙・パルプ 衣料品 食物繊維" />
                   </picture>
                 </div>
               </PicturePanel>

@@ -320,7 +320,11 @@ const ProductsTable = ({
           <div className="productsTable_name">
             <a href="https://www.daicel.com/cell_ac/application/index.html" target="_blank" className="productsTable_link">
               <span className="productsTable_link-arrow"></span>
-              <span className="productsTable_link-label">トリアセテート・フレーク（トリアセチルセルロース）</span>
+              <span className="productsTable_link-label">トリアセテート・フレーク（TAC: トリアセチルセルロース）</span>
+            </a>
+            <a href="https://www.daicel.com/smart/" target="_blank" className="productsTable_link">
+              <span className="productsTable_link-arrow"></span>
+              <span className="productsTable_link-label">TACフィルム用途開発</span>
             </a>
           </div>
           <div className="productsTable_des">
